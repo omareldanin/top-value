@@ -71,26 +71,21 @@ body {
           background-color: #fff;
           border-radius: 30px;
           margin-bottom: 30px;
-          button {
+          img {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #00d0b0;
-            width: 59px;
-            height: 59px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-            color: #fff;
-            font-size: 20px;
-            z-index: 555;
-            i {
-              margin-left: 4px;
-            }
+            transition: 300ms;
+            z-index: 444;
           }
           video {
             width: 100%;
             border-radius: 20px;
+          }
+          .start {
+            opacity: 0;
+            visibility: hidden;
           }
         }
         .image {

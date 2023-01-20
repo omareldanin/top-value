@@ -7,12 +7,35 @@ let bars = document.querySelector("nav .fa-bars"),
     ".request-form form .form-control"
   ),
   requestForm = document.querySelector(".request-form"),
-  formContainer = document.querySelector(".request-form .form-container");
+  formContainer = document.querySelector(".request-form .form-container"),
+  startVideoButtons = document.querySelectorAll(".video img"),
+  videos = document.querySelectorAll("video");
 
 bars.onclick = (e) => {
   navLinks_ul.classList.toggle("open-ul");
   bars.classList.toggle("fa-times");
 };
+
+startVideoButtons.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.target.classList.add("start");
+    const parent = e.target.parentNode;
+    const video = parent.children[1];
+    video.play();
+    video.onended = () => {
+      e.target.classList.remove("start");
+    };
+  });
+});
+
+videos.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    item.pause();
+    const parent = e.target.parentNode;
+    const pauseButton = parent.children[0];
+    pauseButton.classList.remove("start");
+  });
+});
 
 const addEventsToInputs = (inputs) => {
   inputs.forEach((item) => {

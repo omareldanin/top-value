@@ -75,26 +75,21 @@ body section .container .video {
   padding: 40px 37px;
   position: relative;
 }
-body section .container .video button {
+body section .container .video img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #00d0b0;
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  color: #fff;
-  font-size: 30px;
   z-index: 555;
-}
-body section .container .video button i {
-  margin-left: 4px;
+  transition: 300ms;
 }
 body section .container .video video {
   width: 100%;
   border-radius: 20px;
+}
+body section .container .video .start {
+  opacity: 0;
+  visibility: hidden;
 }
 body section .container .image {
   margin-top: 40px;
