@@ -30,10 +30,17 @@ startVideoButtons.forEach((item) => {
 
 videos.forEach((item) => {
   item.addEventListener("click", (e) => {
-    item.pause();
-    const parent = e.target.parentNode;
-    const pauseButton = parent.children[0];
-    pauseButton.classList.remove("start");
+    if (item.paused || item.ended) {
+      item.play();
+      const parent = e.target.parentNode;
+      const pauseButton = parent.children[0];
+      pauseButton.classList.add("start");
+    } else {
+      item.pause();
+      const parent = e.target.parentNode;
+      const pauseButton = parent.children[0];
+      pauseButton.classList.remove("start");
+    }
   });
 });
 
