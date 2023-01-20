@@ -82,6 +82,7 @@ body section .container .video img {
   transform: translate(-50%, -50%);
   z-index: 555;
   transition: 300ms;
+  cursor: pointer;
 }
 body section .container .video video {
   width: 100%;

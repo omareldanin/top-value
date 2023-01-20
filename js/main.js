@@ -18,29 +18,27 @@ bars.onclick = (e) => {
 
 startVideoButtons.forEach((item) => {
   item.addEventListener("click", (e) => {
+    videos.forEach((item) => {
+      item.pause();
+    });
     e.target.classList.add("start");
     const parent = e.target.parentNode;
     const video = parent.children[1];
     video.play();
+    video.controls = true;
     video.onended = () => {
       e.target.classList.remove("start");
+      video.controls = false;
     };
   });
 });
 
 videos.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    if (item.paused || item.ended) {
-      item.play();
-      const parent = e.target.parentNode;
-      const pauseButton = parent.children[0];
-      pauseButton.classList.add("start");
-    } else {
-      item.pause();
-      const parent = e.target.parentNode;
-      const pauseButton = parent.children[0];
-      pauseButton.classList.remove("start");
-    }
+  item.addEventListener("pause", (e) => {
+    item.controls = false;
+    const parent = item.parentNode;
+    const pauseButton = parent.children[0];
+    pauseButton.classList.remove("start");
   });
 });
 

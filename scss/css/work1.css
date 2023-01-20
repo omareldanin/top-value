@@ -88,6 +88,7 @@ body section.our-works1 .row .col .video img {
   transform: translate(-50%, -50%);
   transition: 300ms;
   z-index: 444;
+  cursor: pointer;
 }
 body section.our-works1 .row .col .video video {
   width: 100%;
