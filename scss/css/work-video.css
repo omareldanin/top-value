@@ -1,0 +1,197 @@
+body {
+  background-color: #f7f7f7 !important;
+  direction: rtl;
+  overflow-x: hidden;
+}
+body section {
+  margin: 80px 0;
+}
+body section .container {
+  padding: 0;
+}
+body section .container .head {
+  text-align: center;
+}
+body section .container .head h1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 38px;
+  color: #2b225c;
+  font-weight: 700;
+  margin: auto;
+}
+body section .container .head h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 55px;
+  width: 264px;
+  height: 9px;
+  background-color: #00d0b0;
+  -webkit-clip-path: polygon(100% 1%, 100% 103%, -63% 100%);
+          clip-path: polygon(100% 1%, 100% 103%, -63% 100%);
+}
+body section .container .head p {
+  color: #b8babf;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+body section .container .head p span {
+  color: #2b225c;
+  margin-right: 7px;
+}
+body section .container div.header {
+  margin: 50px 0 30px;
+}
+body section .container div.header .work3Image img {
+  width: 182px;
+}
+body section .container div.header .work2Image img {
+  width: 310px;
+}
+body section .container .desc {
+  padding-right: 30px;
+}
+body section .container .desc h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f0b33;
+}
+body section .container .desc p {
+  font-size: 16px;
+  color: #908f8f;
+  font-weight: 500;
+  margin: 0;
+}
+body section .container .video {
+  display: block;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 40px 37px;
+  position: relative;
+}
+body section .container .video button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00d0b0;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  color: #fff;
+  font-size: 30px;
+  z-index: 555;
+}
+body section .container .video button i {
+  margin-left: 4px;
+}
+body section .container .video video {
+  width: 100%;
+  border-radius: 20px;
+}
+body section .container .image {
+  margin-top: 40px;
+  width: 100%;
+}
+body section .container .image img {
+  width: 100%;
+}
+body section .container .bottom {
+  text-align: center;
+  margin: 80px 0 0;
+}
+body section .container .bottom button {
+  display: block;
+  border: none;
+  background-color: #00d0b0;
+  height: 61px;
+  width: 328px;
+  margin: 30px auto 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media (max-width: 1144px) {
+  body section .container .work-pages .page2 .image1 {
+    top: -150px;
+  }
+}
+@media (max-width: 960px) {
+  body section .container .work-pages .page2 .image1 {
+    top: -100px;
+  }
+}
+@media (max-width: 900px) {
+  body section .container .work-pages .page,
+body section .container .work-pages .page:nth-child(even) {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  body section .container .work-pages .page .desc,
+body section .container .work-pages .page:nth-child(even) .desc {
+    padding: 0;
+    margin: 30px 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  body section .container div.header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body section .container div.header .image,
+body section .container div.header .work3Image,
+body section .container div.header .work2Image {
+    margin-bottom: 30px;
+  }
+  body section .container div.header .desc {
+    padding: 0;
+  }
+  body section .container .work-pages .page1,
+body section .container .work-pages .page2 {
+    flex-direction: column;
+  }
+  body section .container .work-pages .page1 .image1,
+body section .container .work-pages .page1 .image2,
+body section .container .work-pages .page2 .image1,
+body section .container .work-pages .page2 .image2 {
+    position: unset;
+    width: 100%;
+  }
+  body section .container .work-pages .page1 .image,
+body section .container .work-pages .page2 .image {
+    width: 100%;
+  }
+  body section .container .work-pages .page1 .desc,
+body section .container .work-pages .page2 .desc {
+    width: 100%;
+    padding-right: 0;
+  }
+  body section .container .work-pages .page2 .desc {
+    margin: 40px 0;
+  }
+  body section .container .work-pages .page3 {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 500px) {
+  body section .container div.header .work2Image {
+    width: 100%;
+  }
+  body section .container div.header .work2Image img {
+    width: 100%;
+  }
+  body section .container div.header,
+body section .container .work-pages {
+    padding: 30px 20px;
+    border-radius: 30px;
+  }
+}/*# sourceMappingURL=work-video.css.map */

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="90 80 647 342">
+  <defs>
+    <filter id="_2_7" x="0" y="0" width="827" height="522" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="30" result="blur"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_72111" data-name="Group 72111" transform="translate(90 80)">
+    <g transform="matrix(1, 0, 0, 1, -90, -80)" filter="url(#_2_7)">
+      <rect id="_2_7-2" data-name="2 – 7" width="647" height="342" rx="30" transform="translate(90 80)" fill="#e8e8e8"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,180 @@
+body {
+  background-color: #f7f7f7 !important;
+  direction: rtl;
+  overflow-x: hidden;
+}
+body section.our-works {
+  margin: 80px 0;
+}
+body section.our-works .head {
+  text-align: start;
+}
+body section.our-works .head h1,
+body section.our-works .head h2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 38px;
+  color: #2b225c;
+  font-weight: 700;
+}
+body section.our-works .head h1::after,
+body section.our-works .head h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  width: 264px;
+  height: 9px;
+  background-color: #00d0b0;
+  -webkit-clip-path: polygon(100% 1%, 100% 103%, -63% 100%);
+          clip-path: polygon(100% 1%, 100% 103%, -63% 100%);
+}
+body section.our-works .head p {
+  color: #0f0b33;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+body section.our-works .features,
+body section.our-works .how-to-work {
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 44px;
+  padding: 60px 20px;
+}
+body section.our-works .features .head,
+body section.our-works .how-to-work .head {
+  text-align: center;
+}
+body section.our-works .features .head h2,
+body section.our-works .how-to-work .head h2 {
+  font-size: 30px;
+  margin: auto;
+}
+body section.our-works .features .head h2:after,
+body section.our-works .how-to-work .head h2:after {
+  width: 170px;
+  background-color: #2f1ca8;
+  top: 50px;
+  left: 50%;
+  right: unset;
+  transform: translateX(-50%);
+}
+body section.our-works .features .row,
+body section.our-works .how-to-work .row {
+  margin-top: 50px;
+}
+body section.our-works .features .row .col,
+body section.our-works .how-to-work .row .col {
+  margin-bottom: 20px;
+}
+body section.our-works .features .row .col .feature,
+body section.our-works .how-to-work .row .col .feature {
+  padding: 0 20px;
+}
+body section.our-works .features .row .col .feature h3,
+body section.our-works .how-to-work .row .col .feature h3 {
+  font-size: 20px;
+  color: #2b225c;
+  margin: 15px 0;
+  font-weight: bold;
+}
+body section.our-works .features .row .col .feature p,
+body section.our-works .how-to-work .row .col .feature p {
+  font-size: 13px;
+  color: rgba(38, 57, 89, 0.6509803922);
+}
+body section.our-works .how-to-work .head p {
+  max-width: 700px;
+  margin: 30px auto 0;
+}
+body section.our-works .how-to-work .row {
+  margin-top: 70px;
+  padding: 0 70px;
+}
+body section.our-works .how-to-work .row .col {
+  margin-bottom: 70px;
+}
+body section.our-works .how-to-work .row .col div {
+  position: relative;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.0509803922);
+  padding: 0px 40px;
+  height: 214px;
+  border-radius: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body section.our-works .how-to-work .row .col div span {
+  position: absolute;
+  top: 0%;
+  font-size: 28px;
+  transform: translateY(-50%);
+  color: #00d0b0;
+  font-weight: bold;
+  width: 74px;
+  height: 74px;
+  border-radius: 26px;
+  background-color: #f7f8fb;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1019607843);
+}
+body section.our-works .how-to-work .row .col div h3 {
+  font-size: 20px;
+  color: #0f0b33;
+  font-weight: bold;
+}
+body section.our-works .how-to-work .row .col div p {
+  font-size: 14px;
+  color: #908f8f;
+  margin-bottom: 0;
+}
+body section.our-works .how-to-work .bottom {
+  text-align: center;
+  margin: 30px 0;
+}
+body section.our-works .how-to-work .bottom a {
+  color: #2b225c;
+  font-size: 18px;
+  font-weight: bold;
+}
+body section.our-works .how-to-work .bottom button {
+  display: block;
+  border: none;
+  background-color: #00d0b0;
+  height: 61px;
+  width: 328px;
+  margin: 30px auto 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+body footer {
+  transform: translateY(-140px);
+  padding: 120px 0 80px;
+}
+
+@media (max-width: 900px) {
+  body section.our-works .how-to-work .row {
+    padding: 0 14px !important;
+  }
+}
+@media (max-width: 500px) {
+  body section.our-works .how-to-work .row .col div {
+    padding: 0 20px;
+  }
+  body section.our-works .how-to-work .row {
+    padding: 0 10px;
+  }
+  body section.our-works .features,
+body section.our-works .how-to-work {
+    padding: 60px 10px;
+  }
+  body section.our-works .how-to-work .bottom button {
+    width: 90%;
+  }
+}/*# sourceMappingURL=develop-apps.css.map */

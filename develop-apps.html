@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./shared/css/shared.css" />
+    <link rel="stylesheet" href="./scss/css/develop-apps.css" />
+    <link rel="stylesheet" href="./scss/css/all.min.css" />
+    <link rel="stylesheet" href="./scss/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./scss/css/animate.css" />
+    <link rel="icon" href="./images/Artboard–1/logo3.png" />
+    <title>Top Value - develop apps</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <img src="./images/Artboard–1/logo.png" />
+        </div>
+        <div class="links">
+          <ul>
+            <li>
+              <a href="/">الرئيسيه</a>
+            </li>
+            <li>
+              <a href="/our-services.html">الخدمات</a>
+            </li>
+            <li>
+              <a href="/work.html">الاعمال</a>
+            </li>
+          </ul>
+          <div class="buttons">
+            <button class="ask-service" onclick="toggleRequestForm()">
+              <a
+                ><img src="./images/tool-box/tool-box.png" />
+                <span>إطلب خدمه</span></a
+              >
+            </button>
+            <button class="lang">
+              <a class="center">EN</a>
+            </button>
+            <button class="bars">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="request-form center" onclick="toggleRequestForm()">
+      <div class="form-container">
+        <div class="head">
+          <h3>طلب خدمة</h3>
+          <img
+            src="./images/3 – 4/Layer 22.svg"
+            onclick="toggleRequestForm()"
+          />
+        </div>
+        <form>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/User-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label class="" for="name">الاسم</label>
+              <input class="form-control" type="text" name="name" id="name" />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/Email-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="email">البريد الالكتروني</label>
+              <input class="form-control" type="email" name="name" id="email" />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/User-Icon-1.svg" />
+                <span>|</span>
+              </div>
+              <label for="phone">رقم الجوال</label>
+              <input class="form-control" type="text" name="phone" id="phone" />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/Email-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="company">إسم الشركه</label>
+              <input
+                class="form-control"
+                type="text"
+                name="company-name"
+                id="company"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 4/User-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="department">القسم</label>
+              <input
+                class="form-control"
+                type="text"
+                name="department"
+                id="department"
+              />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/Email-Icon-1.svg" />
+                <span>|</span>
+              </div>
+              <div class="arrow-icon">
+                <img src="./images/3 – 3/Polygon 7.svg" />
+              </div>
+              <label for="city">المدينه</label>
+              <select id="city" class="form-control">
+                <option selected></option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-4 details">
+            <div>
+              <label for="details">التفاصيل</label>
+              <textarea id="details" class="form-control" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="mb-3">
+            <button>ارسال</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section class="our-works">
+      <div class="container">
+        <div class="head">
+          <h1>برمجة التطبيقات</h1>
+          <p>
+            لديك فكرة تطبيق مبتكرة و تؤمن بها …. نحولها لك الى واقع ابدأ الآن .
+          </p>
+        </div>
+        <div class="features">
+          <div class="head">
+            <h2>برمجة التطبيقات</h2>
+            <p>
+              لديك فكرة تطبيق مبتكرة و تؤمن بها …. نحولها لك الى واقع ابدأ الآن
+              .
+            </p>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <div class="col">
+              <div class="feature">
+                <img src="./images/3 – 1/Group 72611.svg" />
+                <h3>ميزة هنا</h3>
+                <p>
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
+                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
+                  انترنت
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <img src="./images/3 – 1/Group 72614.svg" />
+                <h3>ميزة هنا</h3>
+                <p>
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
+                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
+                  انترنت
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <img src="./images/3 – 1/Group 72614.svg" />
+                <h3>ميزة هنا</h3>
+                <p>
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
+                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
+                  انترنت
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <img src="./images/3 – 1/Group 72611.svg" />
+                <h3>ميزة هنا</h3>
+                <p>
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
+                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
+                  انترنت
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <img src="./images/3 – 1/Group 72611.svg" />
+                <h3>ميزة هنا</h3>
+                <p>
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
+                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
+                  انترنت
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <img src="./images/3 – 1/Group 72614.svg" />
+                <h3>ميزة هنا</h3>
+                <p>
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
+                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
+                  انترنت
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <img src="./images/3 – 1/Group 72614.svg" />
+                <h3>ميزة هنا</h3>
+                <p>
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
+                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
+                  انترنت
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="feature">
+                <img src="./images/3 – 1/Group 72611.svg" />
+                <h3>ميزة هنا</h3>
+                <p>
+                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
+                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
+                  انترنت
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="how-to-work">
+          <div class="head">
+            <h2>كيف نعمل</h2>
+            <p>
+              تجمع توب فاليو بين الإبداع المهني والقدرات الفنية والبعد التسويقي
+              لتقدم لك الخدمات التي تحقق النجاح لشركتك أو مؤسستك .
+            </p>
+          </div>
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col">
+              <div>
+                <span class="center">01</span>
+                <h3>التواصل</h3>
+                <p>
+                  تم في هذه المرحلة الاجتماع مع العميل لفهم احتيجاته ورغباته من
+                  الخدمة المطلوبة.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="center">02</span>
+                <h3>بدء العمل</h3>
+                <p>
+                  يتم في هذه المرحلة تحويل أفكار وتطلعات العميل الى خدمات جاهزة.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="center">03</span>
+                <h3>الجودة</h3>
+                <p>
+                  في هذه المرحلة تتم عمليات الجودة والاختبارات من قبل مختصين ذو
+                  خبرة عالية.
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="center">04</span>
+                <h3>التسليم</h3>
+                <p>
+                  في هذه المرحلة يتم تسليم العميل خدمته وشرحها له بملف مرفق .
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <a href="#">شاهد أعمالنا في برمجة التطبيقات</a>
+            <button>اطلب الخدمة الان</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="image">
+        <img src="./images/Ornament/Ornament.png" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="logo">
+              <img src="./images/Image 5/Image 5.png" />
+            </div>
+            <div>
+              <p>
+                نضيف قيمة جيدة لعملك <br />
+                التقني
+              </p>
+            </div>
+            <div class="social">
+              <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 links">
+            <div class="services">
+              <p>خدماتنا</p>
+              <a href="#">البرمجة</a>
+              <a href="#">التعليق الصوتي</a>
+              <a href="#">التصميم</a>
+              <a href="#">المونتاج</a>
+            </div>
+            <div class="services">
+              <p>روابط</p>
+              <a href="#">اتصل بنا</a>
+              <a href="#"> انضم الينا</a>
+              <a href="#">عملائنا</a>
+              <a href="#">معرض الاعمال</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact">
+              <p>بيانات التواصل</p>
+              <a><i class="fa-solid fa-location-dot"></i> SYRIS - IDLIB</a>
+              <a><i class="fa-solid fa-phone"></i> 00352681552077</a>
+              <a href="#"
+                ><i class="fa-solid fa-envelope"></i>
+                info@topvaluecompany.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="copy-right">
+          <p>جميع الحقوق محفوظة 2022 توب فاليو</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

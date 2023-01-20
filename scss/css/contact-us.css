@@ -1,0 +1,277 @@
+body {
+  background-color: #f7f7f7 !important;
+  direction: rtl;
+  overflow-x: hidden;
+}
+body section.our-works {
+  margin: 80px 0;
+}
+body section.our-works .head {
+  text-align: start;
+}
+body section.our-works .head h1 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 38px;
+  color: #2b225c;
+  font-weight: 700;
+}
+body section.our-works .head h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  width: 264px;
+  height: 9px;
+  background-color: #00d0b0;
+  -webkit-clip-path: polygon(100% 1%, 100% 103%, -63% 100%);
+          clip-path: polygon(100% 1%, 100% 103%, -63% 100%);
+}
+body section.our-works .head p {
+  color: #0f0b33;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+body section.our-works .head .bottom {
+  text-align: center;
+  margin: 30px 0;
+}
+body section.our-works .head .bottom button {
+  display: block;
+  border: none;
+  background-color: #00d0b0;
+  height: 61px;
+  width: 328px;
+  margin: 30px auto 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+body section.our-works .contact-services {
+  background-color: #fff;
+  border-radius: 44px;
+  margin-top: 50px;
+  padding: 40px 10px;
+  min-height: 249px;
+  display: flex;
+  align-items: center;
+}
+body section.our-works .contact-services .row {
+  width: 100%;
+}
+body section.our-works .contact-services .row div {
+  text-align: center;
+}
+body section.our-works .contact-services .row div h3 {
+  font-size: 20px;
+  color: #00d0b0;
+  font-weight: bold;
+  margin: 15px 0;
+}
+body section.our-works .contact-services .row div p {
+  font-size: 14px;
+  color: #908f8f;
+  margin: 0;
+}
+body section.our-works .contact-services .row div:nth-child(2) {
+  border-left: 1px solid #e7e7eb;
+  border-right: 1px solid #e7e7eb;
+}
+body section.our-works .contact {
+  margin-top: 50px;
+}
+body section.our-works .contact .row .col-lg-6 {
+  margin-bottom: 50px;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form {
+  background-color: #fff;
+  height: 100%;
+  border-radius: 24px;
+  padding: 20px;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form h4 {
+  font-size: 20px;
+  color: #0f0b33;
+  font-weight: bold;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form {
+  margin-top: 30px;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px !important;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div {
+  width: 50%;
+  position: relative;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div label,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div label {
+  position: absolute;
+  color: #b8babf;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 5px;
+  top: 50%;
+  transition: 300ms;
+  background-color: #fff;
+  right: 55px;
+  transform: translateY(-50%);
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div .icon,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div .arrow-icon,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div .icon,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div .arrow-icon {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  padding-left: 10px;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div .icon span,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div .arrow-icon span,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div .icon span,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div .arrow-icon span {
+  color: #c3cddb;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div .arrow-icon,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div .arrow-icon {
+  right: unset;
+  left: 20px;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 .expandLabel label,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 .expandLabel label {
+  top: 0 !important;
+  color: #2c2c2c !important;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 button,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 button {
+  display: block;
+  border: none;
+  background-color: #00d0b0;
+  height: 61px;
+  width: 100%;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 input,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 textarea,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 select,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 input,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 textarea,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 select {
+  border-radius: 0;
+  color: #b8babf;
+  border-color: #eff0f4;
+  padding: 10px 60px;
+  resize: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 select,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 select {
+  width: 100%;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 select option,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 select option {
+  background-color: #0f0b33;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 input:focus,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 textarea:focus,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 select:focus,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 input:focus,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 textarea:focus,
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 select:focus {
+  box-shadow: none;
+  border-color: #00d0b0;
+  outline: none;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div {
+  width: 100%;
+}
+body section.our-works .contact .row .col-lg-6 .contact-form form .details div label {
+  top: 30px;
+  right: 15px;
+}
+body section.our-works .contact .row .col-lg-6 .contact-info {
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 20px;
+}
+body section.our-works .contact .row .col-lg-6 .contact-info .info {
+  margin: 40px 0;
+}
+body section.our-works .contact .row .col-lg-6 .contact-info .info .location,
+body section.our-works .contact .row .col-lg-6 .contact-info .info .email div {
+  display: flex;
+}
+body section.our-works .contact .row .col-lg-6 .contact-info .info .location h5,
+body section.our-works .contact .row .col-lg-6 .contact-info .info .email div h5 {
+  font-size: 20px;
+  color: #2c2c2c;
+  font-weight: bold;
+  margin-right: 15px;
+}
+body section.our-works .contact .row .col-lg-6 .contact-info .info .email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body section.our-works .contact .row .col-lg-6 .contact-info .info .email h5 {
+  margin: 0;
+}
+body section.our-works .contact .row .col-lg-6 .contact-info .info .email .social a {
+  margin: 0 5px;
+  transform: rotate(90deg);
+}
+body section.our-works .contact .row .col-lg-6 .contact-info .map {
+  position: relative;
+}
+body section.our-works .contact .row .col-lg-6 .contact-info .map img {
+  position: absolute;
+  width: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@media (max-width: 576px) {
+  body section.our-works .contact-services .row div:nth-child(2) {
+    border: none;
+    margin: 25px 0;
+  }
+  body section.our-works .contact .row .col-lg-6 .contact-info .info .email {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body section.our-works .contact .row .col-lg-6 .contact-info .info .email .social {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 {
+    flex-direction: column;
+  }
+  body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  body section.contact-us .how-to-work .bottom button {
+    width: 90%;
+  }
+}/*# sourceMappingURL=contact-us.css.map */

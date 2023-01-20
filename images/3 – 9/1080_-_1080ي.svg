@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="90 80 182 182">
+  <defs>
+    <filter id="_1080_-_1080ي" x="0" y="0" width="362" height="362" filterUnits="userSpaceOnUse">
+      <feOffset dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="30" result="blur"/>
+      <feFlood flood-opacity="0.031"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#_1080_-_1080ي)">
+    <g id="_1080_-_1080ي-2" data-name="1080_-_1080ي" transform="translate(90 80)" fill="#e8e8e8" stroke="#e8e8e8" stroke-width="1">
+      <rect width="182" height="182" rx="19" stroke="none"/>
+      <rect x="0.5" y="0.5" width="181" height="181" rx="18.5" fill="none"/>
+    </g>
+  </g>
+</svg>
