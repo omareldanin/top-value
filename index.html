@@ -4,13 +4,112 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./scss/css/main.css" />
     <link rel="stylesheet" href="./scss/css/all.min.css" />
+    <link rel="stylesheet" href="./scss/css/animate.css" />
     <link rel="stylesheet" href="./scss/css/bootstrap.min.css" />
     <link rel="icon" href="./images/Artboard–1/logo3.png" />
     <title>Top Value</title>
   </head>
   <body>
+    <div class="request-form center" onclick="toggleRequestForm()">
+      <div class="form-container">
+        <div class="head">
+          <h3>طلب خدمة</h3>
+          <img
+            src="./images/3 – 4/Layer 22.svg"
+            onclick="toggleRequestForm()"
+          />
+        </div>
+        <form>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/User-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label class="" for="name">الاسم</label>
+              <input class="form-control" type="text" name="name" id="name" />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/Email-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="email">البريد الالكتروني</label>
+              <input class="form-control" type="email" name="name" id="email" />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/User-Icon-1.svg" />
+                <span>|</span>
+              </div>
+              <label for="phone">رقم الجوال</label>
+              <input class="form-control" type="text" name="phone" id="phone" />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/Email-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="company">إسم الشركه</label>
+              <input
+                class="form-control"
+                type="text"
+                name="company-name"
+                id="company"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 4/User-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="department">القسم</label>
+              <input
+                class="form-control"
+                type="text"
+                name="department"
+                id="department"
+              />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="./images/3 – 3/Email-Icon-1.svg" />
+                <span>|</span>
+              </div>
+              <div class="arrow-icon">
+                <img src="./images/3 – 3/Polygon 7.svg" />
+              </div>
+              <label for="city">المدينه</label>
+              <select id="city" class="form-control">
+                <option selected></option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-4 details">
+            <div>
+              <label for="details">التفاصيل</label>
+              <textarea id="details" class="form-control" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="mb-3">
+            <button>ارسال</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <nav>
       <div class="container">
         <div class="logo">
@@ -19,68 +118,646 @@
         <div class="links">
           <ul>
             <li>
-              <a href="#">الرئيسيه</a>
+              <a href="/">الرئيسيه</a>
             </li>
             <li>
-              <a href="#">الخدمات</a>
+              <a href="/our-services.html">الخدمات</a>
             </li>
             <li>
-              <a href="#">الاعمال</a>
-            </li>
-            <li>
-              <button class="ask-service">
-                <a><img src="./images/tool-box/tool-box.png" />إطلب خدمه</a>
-              </button>
-            </li>
-            <li class="lang">
-              <button>
-                <a class="center">EN</a>
-              </button>
+              <a href="/work.html">الاعمال</a>
             </li>
           </ul>
+          <div class="buttons">
+            <button class="ask-service" onclick="toggleRequestForm()">
+              <a
+                ><img src="./images/tool-box/tool-box.png" />
+                <span>إطلب خدمه</span></a
+              >
+            </button>
+            <button class="lang">
+              <a class="center">EN</a>
+            </button>
+            <button class="bars">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
         </div>
       </div>
     </nav>
     <section class="header">
+      <div class="loading start-loading">
+        <div class="container">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-7">
             <div class="info">
-              <h1>توب فاليو</h1>
-              <h3>القيمة الأفضل لنشاطك التجاري</h3>
-              <p>
+              <h1 class="wow fadeInRight">توب فاليو</h1>
+              <h3 class="wow fadeInRight" data-wow-delay="0.3s">
+                القيمة الأفضل لنشاطك التجاري
+              </h3>
+              <p class="wow fadeInRight" data-wow-delay=".6s">
                 تجمع توب فاليو بين الإبداع المهني والقدرات الفنية والبعد
                 التسويقي لتقدم لك الخدمات التي تحقق النجاح لشركتك أو مؤسستك
               </p>
-              <button>
+              <button
+                class="wow fadeInUp"
+                data-wow-delay=".9s"
+                onclick="toggleRequestForm()"
+              >
                 <a><img src="./images/tool-box/tool-box.png" />إطلب خدمه</a>
               </button>
             </div>
           </div>
           <div class="col-md-5">
-            <img src="./images/Group 72539/Group 72539.png" />
+            <img
+              class="wow fadeInLeft"
+              data-wow-delay=".9s"
+              src="./images/Group 72539/Group 72539.png"
+            />
           </div>
         </div>
         <div class="more">
-          <div></div>
-          <div class="mouse-down">
+          <a href="#about" class="mouse-down">
             <span></span>
             <i class="fa-solid fa-angle-down"></i>
-          </div>
+          </a>
           <div class="contact-us">
             <i>i</i>
             <span>لديك استفسار ؟</span>
             <a href="#">تواصل معنا</a>
-          </span>
+          </div>
+        </div>
+      </div>
+      <div class="our-number">
+        <div class="container">
+          <div class="row row-cols-2 row-cols-md-4">
+            <div class="col">
+              <div>
+                <span class="number" data-number="80">+0</span>
+                <span>موقع وتطبيق</span>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="number" data-number="80">+0</span>
+                <span>موقع وتطبيق</span>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="number" data-number="80">+0</span>
+                <span>موقع وتطبيق</span>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="number" data-number="80">+0</span>
+                <span>موقع وتطبيق</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about-services">
+      <div class="over">
+        <div class="container">
+          <div class="about">
+            <div class="head wow fadeInUp">
+              <h1>عن توب فاليلو</h1>
+              <p>تعرف علينا و ما يمكن ان نقدمه لك</p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col wow fadeInRight">
+                <div>
+                  <span class="center">
+                    <img src="./images/Artboard–1/logo3.png" />
+                  </span>
+                  <h3>عنوان رئيسي هنا عنوان رئيسي هنا</h3>
+                  <p>
+                    نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و يجعله
+                    سعيدا جدًا بالخدمات التي قُدمت إليه .
+                  </p>
+                </div>
+              </div>
+              <div class="col wow fadeInRight" data-wow-delay=".1s">
+                <div>
+                  <span class="center">
+                    <img src="./images/Artboard–1/logo3.png" />
+                  </span>
+                  <h3>عنوان رئيسي هنا عنوان رئيسي هنا</h3>
+                  <p>
+                    نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و يجعله
+                    سعيدا جدًا بالخدمات التي قُدمت إليه .
+                  </p>
+                </div>
+              </div>
+              <div class="col wow fadeInRight" data-wow-delay=".2s">
+                <div>
+                  <span class="center">
+                    <img src="./images/Artboard–1/logo3.png" />
+                  </span>
+                  <h3>عنوان رئيسي هنا عنوان رئيسي هنا</h3>
+                  <p>
+                    نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و يجعله
+                    سعيدا جدًا بالخدمات التي قُدمت إليه .
+                  </p>
+                </div>
+              </div>
+              <div class="col wow fadeInRight" data-wow-delay=".3s">
+                <div>
+                  <span class="center">
+                    <img src="./images/Artboard–1/logo3.png" />
+                  </span>
+                  <h3>عنوان رئيسي هنا عنوان رئيسي هنا</h3>
+                  <p>
+                    نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و يجعله
+                    سعيدا جدًا بالخدمات التي قُدمت إليه .
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services">
+            <div class="head wow fadeInUp">
+              <h1>خدماتنا</h1>
+              <p>نعيد ابتكار أعمالك من خلال خدمات نقدمها لك</p>
+            </div>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide wow fadeInLeft">
+                  <div class="service">
+                    <div class="icon">
+                      <img src="./images/display-code.svg" class="wow bounce" />
+                    </div>
+                    <div class="desc">
+                      <h3>البرمجة</h3>
+                      <p>
+                        نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و
+                        يجعله سعيدا جدًا بالخدمات التي قُدمت إليه .
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay=".1s">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="./images/voice-recorder.svg"
+                        class="wow bounce"
+                        data-wow-delay="1s"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>التعليق الصوتي</h3>
+                      <p>
+                        نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و
+                        يجعله سعيدا جدًا بالخدمات التي قُدمت إليه .
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay=".2s">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="./images/fill.svg"
+                        class="wow bounce"
+                        data-wow-delay="2s"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>التصميم</h3>
+                      <p>
+                        نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و
+                        يجعله سعيدا جدًا بالخدمات التي قُدمت إليه .
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay=".3s">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="./images/video.svg"
+                        class="wow bounce"
+                        data-wow-delay="3s"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>المونتاج</h3>
+                      <p>
+                        نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و
+                        يجعله سعيدا جدًا بالخدمات التي قُدمت إليه .
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay=".4s">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="./images/Live TV.svg"
+                        class="wow bounce"
+                        data-wow-delay="4s"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>تقديم البرامج</h3>
+                      <p>
+                        نتأكد من تنفيذ الخدمات و تسليمها بشكل يرضي العميل و
+                        يجعله سعيدا جدًا بالخدمات التي قُدمت إليه .
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <div class="container">
+        <div class="head wow fadeInUp">
+          <h1>أعمالنا</h1>
+          <p>نعيد ابتكار أعمالك من خلال خدمات نقدمها لك</p>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide wow fadeInLeft">
+              <div class="work">
+                <div class="image center">
+                  <div class="work-image">
+                    <img src="./images/laptop.png" />
+                  </div>
+                  <div class="icons">
+                    <div class="icon center">
+                      <img src="./images/3/laptop.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="./images/3/Group 58160.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="./images/3/Group 72042.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <h3>هنا عنوان العمل</h3>
+                  <span>برمجه تطبيقات</span>
+                  <p>
+                    تطبيق يجمع لك أحدث العروض و التخفيضات ف مكان واحد بطريقة
+                    سهلة و بسيطة ورح يوفر عليك وقتك و جهدك في عملية البحث عن
+                    الأشياء اللي تدورها.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide wow fadeInLeft" data-wow-delay=".1">
+              <div class="work">
+                <div class="image center">
+                  <div class="work-image">
+                    <img src="./images/laptop.png" />
+                  </div>
+                  <div class="icons">
+                    <div class="icon center">
+                      <img src="./images/3/laptop.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="./images/3/Group 58160.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="./images/3/Group 72042.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <h3>هنا عنوان العمل</h3>
+                  <span>برمجه تطبيقات</span>
+                  <p>
+                    تطبيق يجمع لك أحدث العروض و التخفيضات ف مكان واحد بطريقة
+                    سهلة و بسيطة ورح يوفر عليك وقتك و جهدك في عملية البحث عن
+                    الأشياء اللي تدورها.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide wow fadeInLeft" data-wow-delay=".2">
+              <div class="work">
+                <div class="image center">
+                  <div class="work-image">
+                    <img src="./images/laptop.png" />
+                  </div>
+                  <div class="icons">
+                    <div class="icon center">
+                      <img src="./images/3/laptop.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="./images/3/Group 58160.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="./images/3/Group 72042.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <h3>هنا عنوان العمل</h3>
+                  <span>برمجه تطبيقات</span>
+                  <p>
+                    تطبيق يجمع لك أحدث العروض و التخفيضات ف مكان واحد بطريقة
+                    سهلة و بسيطة ورح يوفر عليك وقتك و جهدك في عملية البحث عن
+                    الأشياء اللي تدورها.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide wow fadeInLeft" data-wow-delay=".3">
+              <div class="work">
+                <div class="image center">
+                  <div class="work-image">
+                    <img src="./images/laptop.png" />
+                  </div>
+                  <div class="icons">
+                    <div class="icon center">
+                      <img src="./images/3/laptop.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="./images/3/Group 58160.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="./images/3/Group 72042.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <h3>هنا عنوان العمل</h3>
+                  <span>برمجه تطبيقات</span>
+                  <p>
+                    تطبيق يجمع لك أحدث العروض و التخفيضات ف مكان واحد بطريقة
+                    سهلة و بسيطة ورح يوفر عليك وقتك و جهدك في عملية البحث عن
+                    الأشياء اللي تدورها.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="show-more">
+          <a href="#">مشاهده المزيد</a>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="image">
+        <img src="./images/3 – 1/Group 59998.png" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="head wow fadeInRight">
+              <h1>لماذا تختارنا نحن</h1>
+              <p>
+                تجمع توب فاليو بين الإبداع المهني والقدرات الفنية والبعد
+                التسويقي لتقدم لك الخدمات التي تحقق النجاح لشركتك أو مؤسستك
+              </p>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="feature wow fadeInUp" data-wow-delay=".2s">
+              <img src="./images/3 – 1/Group 72611.svg" />
+              <h3>الاستماع</h3>
+              <p>
+                ما يميز توب فاليو عن غيرها من شركات البرمجة والتطوير هو قدرتها
+                الفريدة على فهم متطلبات العميل بدقة.
+              </p>
+            </div>
+            <div class="feature wow fadeInUp" data-wow-delay=".4s">
+              <img src="./images/3 – 1/Group 72614.svg" />
+              <h3>الخبرة</h3>
+              <p>
+                نحن نعلم ما يفيد وكيف تحتاجه، معرفتنا العميقة بالبرمجة والتطوير
+                تمكننا من تطوير وابتكار برامج وخدمات تلائم متطلباتك.
+              </p>
+            </div>
+            <div class="feature wow fadeInUp" data-wow-delay=".6s">
+              <img src="./images/3 – 1/Group 72616.png" />
+              <h3>التميز بالعمل</h3>
+              <p>
+                من خلال القدرة على إنشاء التطبيقات عبر استخدام احدث لغات البرمجة
+                والأعتماد على اجدد الوسائل والأدوات
+              </p>
+            </div>
+            <div class="feature wow fadeInUp" data-wow-delay=".8s">
+              <img src="./images/3 – 1/Group 72618.png" />
+              <h3>دعم فني</h3>
+              <p>
+                تقديم الدعم الفني بعد تسليم اي خدمة او تطبيق لضمان تشغيله بشكل
+                مثالي والمساعدة في تحقيق اهدافه الرئيسية
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="customers">
+      <div class="over">
+        <div class="container">
+          <div class="head wow fadeInUp">
+            <h1>عملائنا</h1>
+            <p>نعيد ابتكار أعمالك من خلال خدمات نقدمها لك</p>
+          </div>
+          <div class="testmencial">
+            <div class="row">
+              <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
+                <div class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p>
+                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
+                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
+                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
+                          نماذج مواقع انترنت …
+                        </p>
+                        <div class="info">
+                          <div class="profile">
+                            <img
+                              src="./images/Artboard-2/Group 480.png"
+                              alt=""
+                            />
+                            <div class="name">
+                              <h4>محمد حسام</h4>
+                              <p>مصمم مواقع</p>
+                            </div>
+                          </div>
+                          <div class="icon">
+                            <i class="fa-solid fa-quote-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p>
+                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
+                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
+                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
+                          نماذج مواقع انترنت …
+                        </p>
+                        <div class="info">
+                          <div class="profile">
+                            <img
+                              src="./images/Artboard-2/Group 480.png"
+                              alt=""
+                            />
+                            <div class="name">
+                              <h4>محمد حسام</h4>
+                              <p>مصمم مواقع</p>
+                            </div>
+                          </div>
+                          <div class="icon">
+                            <i class="fa-solid fa-quote-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p>
+                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
+                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
+                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
+                          نماذج مواقع انترنت …
+                        </p>
+                        <div class="info">
+                          <div class="profile">
+                            <img
+                              src="./images/Artboard-2/Group 480.png"
+                              alt=""
+                            />
+                            <div class="name">
+                              <h4>محمد حسام</h4>
+                              <p>مصمم مواقع</p>
+                            </div>
+                          </div>
+                          <div class="icon">
+                            <i class="fa-solid fa-quote-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="col-lg-6 center wow fadeInLeft" data-wow-delay=".1s">
+                <div class="users">
+                  <div class="user1">
+                    <img src="./images/Artboard-2/Group 348.png" alt="" />
+                  </div>
+                  <div class="user2">
+                    <img src="./images/Artboard-2/Group 480.png" alt="" />
+                  </div>
+                  <div class="user3">
+                    <img src="./images/Artboard-2/Group 348.png" alt="" />
+                  </div>
+                  <div class="user4">
+                    <img src="./images/Artboard-2/Group 480.png" alt="" />
+                  </div>
+                  <div class="user5">
+                    <img src="./images/Artboard-2/Group 348.png" alt="" />
+                  </div>
+                  <div class="user6">
+                    <img src="./images/Artboard-2/Group 348.png" alt="" />
+                  </div>
+                </div>
+                <div class="active-user">
+                  <img src="./images/Artboard-2/Group 349.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="companies">
+          <div class="container">
+            <img src="./images/Artboard-2/Rectangle 73.png" />
+            <img src="./images/Artboard-2/Rectangle 74.png" />
+            <img src="./images/Artboard-2/Rectangle 75.png" />
+            <img src="./images/Artboard-2/Rectangle 76.png" />
+            <img src="./images/Artboard-2/Rectangle 77.png" />
+          </div>
         </div>
       </div>
     </section>
     <footer>
+      <div class="image">
+        <img src="./images/Ornament/Ornament.png" />
+      </div>
       <div class="container">
-        
+        <div class="row">
+          <div class="col-md-4">
+            <div class="logo">
+              <img src="./images/Image 5/Image 5.png" />
+            </div>
+            <div>
+              <p>
+                نضيف قيمة جيدة لعملك <br />
+                التقني
+              </p>
+            </div>
+            <div class="social">
+              <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 links">
+            <div class="services">
+              <p>خدماتنا</p>
+              <a href="#">البرمجة</a>
+              <a href="#">التعليق الصوتي</a>
+              <a href="#">التصميم</a>
+              <a href="#">المونتاج</a>
+            </div>
+            <div class="services">
+              <p>روابط</p>
+              <a href="#">اتصل بنا</a>
+              <a href="#"> انضم الينا</a>
+              <a href="#">عملائنا</a>
+              <a href="#">معرض الاعمال</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact">
+              <p>بيانات التواصل</p>
+              <a><i class="fa-solid fa-location-dot"></i> SYRIS - IDLIB</a>
+              <a><i class="fa-solid fa-phone"></i> 00352681552077</a>
+              <a href="#"
+                ><i class="fa-solid fa-envelope"></i>
+                info@topvaluecompany.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="copy-right">
+          <p>جميع الحقوق محفوظة 2022 توب فاليو</p>
+        </div>
       </div>
     </footer>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script src="./js/main.js"></script>
   </body>
 </html>

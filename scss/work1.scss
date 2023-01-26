@@ -89,6 +89,31 @@ body {
             visibility: hidden;
           }
         }
+        .audio-work {
+          background-color: #fff;
+          padding: 22px;
+          border-radius: 30px;
+          margin-bottom: 30px;
+          .audio {
+            position: relative;
+            margin-bottom: 60px;
+            .control {
+              position: absolute;
+              top: 0px;
+              left: 50%;
+              transform: translateX(-50%);
+              z-index: 555;
+              .image {
+                padding: 3px;
+                border: 3px solid #00d0b0;
+                border-radius: 62px;
+                img {
+                  max-width: 150px;
+                }
+              }
+            }
+          }
+        }
         .image {
           padding: 22px;
           background-color: #fff;
@@ -105,9 +130,9 @@ body {
             font-weight: bold;
           }
           p {
-            font-size: 15px;
+            font-size: 14px;
             color: #908f8f;
-            font-weight: 600;
+            font-weight: 500;
           }
         }
       }
