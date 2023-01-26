@@ -1115,6 +1115,18 @@ body .center {
   }
 }
 @media (max-width: 550px) {
+  body section.customers .over .container .col-lg-6:last-child {
+    height: 350px;
+  }
+  body section.customers .over .container .col-lg-6:last-child .active-user img {
+    width: 80%;
+  }
+  body section.customers .over .container .testmencial {
+    margin-bottom: 150px;
+  }
+  body section.customers .over .companies .container {
+    width: 95%;
+  }
   body .header .container .row .col-md-7 .info h1 {
     font-size: 40px;
     margin-bottom: 25px;
