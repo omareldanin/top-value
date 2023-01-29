@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../scss/css/main.css" />
+    <link rel="stylesheet" href="../scss/css/all.min.css" />
+    <link rel="stylesheet" href="../scss/css/animate.css" />
+    <link rel="stylesheet" href="../scss/css/bootstrap.min.css" />
+    <link rel="icon" href="../images/Artboard–1/logo3.png" />
+    <title>Top Value</title>
+  </head>
+  <body>
+    <div class="request-form center" onclick="toggleRequestForm()">
+      <div class="form-container">
+        <div class="head">
+          <h3>Request a service</h3>
+          <img
+            src="../images/3 – 4/Layer 22.svg"
+            onclick="toggleRequestForm()"
+          />
+        </div>
+        <form>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="../images/3 – 3/User-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label class="" for="name">Name</label>
+              <input class="form-control" type="text" name="name" id="name" />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="../images/3 – 3/Email-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="email">Email</label>
+              <input class="form-control" type="email" name="name" id="email" />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="../images/3 – 3/User-Icon-1.svg" />
+                <span>|</span>
+              </div>
+              <label for="phone">phone number</label>
+              <input class="form-control" type="text" name="phone" id="phone" />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="../images/3 – 3/Email-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="company">Company name</label>
+              <input
+                class="form-control"
+                type="text"
+                name="company-name"
+                id="company"
+              />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div>
+              <div class="icon">
+                <img src="../images/3 – 4/User-Icon.svg" />
+                <span>|</span>
+              </div>
+              <label for="department">department</label>
+              <input
+                class="form-control"
+                type="text"
+                name="department"
+                id="department"
+              />
+            </div>
+            <div>
+              <div class="icon">
+                <img src="../images/3 – 3/Email-Icon-1.svg" />
+                <span>|</span>
+              </div>
+              <div class="arrow-icon">
+                <img src="../images/3 – 3/Polygon 7.svg" />
+              </div>
+              <label for="city">City</label>
+              <select id="city" class="form-control">
+                <option selected></option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="mb-4 details">
+            <div>
+              <label for="details">Details</label>
+              <textarea id="details" class="form-control" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="mb-3">
+            <button>Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <img src="../images/Artboard–1/Image1.png" />
+          <img src="../images/Artboard–1/logo.png" />
+        </div>
+        <div class="links">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/our-services.html">services</a>
+            </li>
+            <li>
+              <a href="/work.html">portfolio</a>
+            </li>
+          </ul>
+          <div class="buttons">
+            <button class="ask-service" onclick="toggleRequestForm()">
+              <a
+                ><img src="../images/tool-box/tool-box.png" />
+                <span>Request services</span></a
+              >
+            </button>
+            <button class="lang">
+              <a class="center">AR</a>
+            </button>
+            <button class="bars">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="header">
+      <div class="loading start-loading">
+        <div class="container">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+          <span class="five"></span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="info">
+              <h1 class="wow fadeInLeft">Top Value</h1>
+              <h3 class="wow fadeInLeft" data-wow-delay="0.3s">
+                The best value for your business
+              </h3>
+              <p class="wow fadeInLeft" data-wow-delay=".6s">
+                Top Value combines professional creativity, technical
+                capabilities and marketing dimension to provide you with
+                services that achieve success for your company or organization.
+              </p>
+              <button
+                class="wow fadeInUp"
+                data-wow-delay=".9s"
+                onclick="toggleRequestForm()"
+              >
+                <a
+                  ><img src="../images/tool-box/tool-box.png" />Request
+                  Service</a
+                >
+              </button>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <img
+              class="wow fadeInLeft"
+              data-wow-delay=".9s"
+              src="../images/rocket.png"
+            />
+          </div>
+        </div>
+        <div class="more">
+          <a href="#about" class="mouse-down">
+            <span></span>
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
+          <div class="contact-us">
+            <i>i</i>
+            <span>Have an inquiry ?</span>
+            <a href="#">Contact us</a>
+          </div>
+        </div>
+      </div>
+      <div class="our-number">
+        <div class="container">
+          <div class="row row-cols-2 row-cols-md-4">
+            <div class="col">
+              <div>
+                <span class="number" data-number="80">+0</span>
+                <span>Website and application</span>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="number" data-number="80">+0</span>
+                <span>Website and application</span>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="number" data-number="80">+0</span>
+                <span>Website and application</span>
+              </div>
+            </div>
+            <div class="col">
+              <div>
+                <span class="number" data-number="80">+0</span>
+                <span>Website and application</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about-services">
+      <div class="over">
+        <div class="container">
+          <div class="about">
+            <div class="head wow fadeInUp">
+              <h1>About Top Value</h1>
+              <p>Get to know us and what we can offer you</p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col wow fadeInLeft">
+                <div>
+                  <span class="center">
+                    <img src="../images/Artboard–1/logo3.png" />
+                  </span>
+                  <h3>Headline here Headline here</h3>
+                  <p>
+                    We make sure that the services are implemented and delivered
+                    in a way that satisfies the customer and makes him very
+                    happy with the services that were provided to him.
+                  </p>
+                </div>
+              </div>
+              <div class="col wow fadeInLeft" data-wow-delay=".1s">
+                <div>
+                  <span class="center">
+                    <img src="../images/Artboard–1/logo3.png" />
+                  </span>
+                  <h3>Headline here Headline here</h3>
+                  <p>
+                    We make sure that the services are implemented and delivered
+                    in a way that satisfies the customer and makes him very
+                    happy with the services that were provided to him.
+                  </p>
+                </div>
+              </div>
+              <div class="col wow fadeInLeft" data-wow-delay=".2s">
+                <div>
+                  <span class="center">
+                    <img src="../images/Artboard–1/logo3.png" />
+                  </span>
+                  <h3>Headline here Headline here</h3>
+                  <p>
+                    We make sure that the services are implemented and delivered
+                    in a way that satisfies the customer and makes him very
+                    happy with the services that were provided to him.
+                  </p>
+                </div>
+              </div>
+              <div class="col wow fadeInLeft" data-wow-delay=".3s">
+                <div>
+                  <span class="center">
+                    <img src="../images/Artboard–1/logo3.png" />
+                  </span>
+                  <h3>Headline here Headline here</h3>
+                  <p>
+                    We make sure that the services are implemented and delivered
+                    in a way that satisfies the customer and makes him very
+                    happy with the services that were provided to him.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services">
+            <div class="head wow fadeInUp">
+              <h1>Services</h1>
+              <p>We reinvent your business through our services</p>
+            </div>
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide wow fadeInLeft">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="../images/display-code.svg"
+                        class="wow bounce"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>programming</h3>
+                      <p>
+                        We make sure that the services are implemented and
+                        delivered in a manner that satisfies the customer and
+                        makes him satisfied Very happy with the services
+                        provided to him.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay=".1s">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="../images/voice-recorder.svg"
+                        class="wow bounce"
+                        data-wow-delay="1s"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>Voiceover</h3>
+                      <p>
+                        We make sure that the services are implemented and
+                        delivered in a way that satisfies the customer and makes
+                        him very happy with the services that were provided to
+                        him.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay=".2s">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="../images/fill.svg"
+                        class="wow bounce"
+                        data-wow-delay="2s"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>Design</h3>
+                      <p>
+                        We make sure that the services are implemented and
+                        delivered in a way that satisfies the customer and makes
+                        him very happy with the services that were provided to
+                        him.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay=".3s">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="../images/video.svg"
+                        class="wow bounce"
+                        data-wow-delay="3s"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>montage</h3>
+                      <p>
+                        We make sure that the services are implemented and
+                        delivered in a way that satisfies the customer and makes
+                        him very happy with the services that were provided to
+                        him.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide wow fadeInLeft" data-wow-delay=".4s">
+                  <div class="service">
+                    <div class="icon">
+                      <img
+                        src="../images/Live TV.svg"
+                        class="wow bounce"
+                        data-wow-delay="4s"
+                      />
+                    </div>
+                    <div class="desc">
+                      <h3>software delivery</h3>
+                      <p>
+                        We make sure that the services are implemented and
+                        delivered in a way that satisfies the customer and makes
+                        him very happy with the services that were provided to
+                        him.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio">
+      <div class="container">
+        <div class="head wow fadeInUp">
+          <h1>Portfolio</h1>
+          <p>We reinvent your business through our services</p>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide wow fadeInLeft">
+              <div class="work">
+                <div class="image center">
+                  <div class="work-image">
+                    <img src="../images/laptop.png" />
+                  </div>
+                  <div class="icons">
+                    <div class="icon center">
+                      <img src="../images/3/laptop.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="../images/3/Group 58160.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="../images/3/Group 72042.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <h3>Here is the working address</h3>
+                  <span>Programming applications</span>
+                  <p>
+                    An application that brings you the latest offers and
+                    discounts in one place in an easy and simple way, and it
+                    will save you your time and effort in the process of
+                    searching for the things you are looking for.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide wow fadeInLeft" data-wow-delay=".1">
+              <div class="work">
+                <div class="image center">
+                  <div class="work-image">
+                    <img src="../images/laptop.png" />
+                  </div>
+                  <div class="icons">
+                    <div class="icon center">
+                      <img src="../images/3/laptop.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="../images/3/Group 58160.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="../images/3/Group 72042.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <h3>Here is the working address</h3>
+                  <span>Programming applications</span>
+                  <p>
+                    An application that brings you the latest offers and
+                    discounts in one place in an easy and simple way, and it
+                    will save you your time and effort in the process of
+                    searching for the things you are looking for.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide wow fadeInLeft" data-wow-delay=".2">
+              <div class="work">
+                <div class="image center">
+                  <div class="work-image">
+                    <img src="../images/laptop.png" />
+                  </div>
+                  <div class="icons">
+                    <div class="icon center">
+                      <img src="../images/3/laptop.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="../images/3/Group 58160.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="../images/3/Group 72042.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <h3>Here is the working address</h3>
+                  <span>Programming applications</span>
+                  <p>
+                    An application that brings you the latest offers and
+                    discounts in one place in an easy and simple way, and it
+                    will save you your time and effort in the process of
+                    searching for the things you are looking for.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide wow fadeInLeft" data-wow-delay=".3">
+              <div class="work">
+                <div class="image center">
+                  <div class="work-image">
+                    <img src="../images/laptop.png" />
+                  </div>
+                  <div class="icons">
+                    <div class="icon center">
+                      <img src="../images/3/laptop.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="../images/3/Group 58160.svg" />
+                    </div>
+                    <div class="icon center">
+                      <img src="../images/3/Group 72042.svg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="desc">
+                  <h3>Here is the working address</h3>
+                  <span>Programming applications</span>
+                  <p>
+                    An application that brings you the latest offers and
+                    discounts in one place in an easy and simple way, and it
+                    will save you your time and effort in the process of
+                    searching for the things you are looking for.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="show-more">
+          <a href="#">View more</a>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="image">
+        <img src="../images/3 – 1/Group 59998.png" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="head wow fadeInLeft">
+              <h1>Why choose us</h1>
+              <p>
+                Top Value combines professional creativity, technical
+                capabilities and dimension Marketing to provide you with the
+                services that achieve success for your company or organization
+              </p>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="feature wow fadeInUp" data-wow-delay=".2s">
+              <img src="../images/3 – 1/Group 72611.svg" />
+              <h3>listen</h3>
+              <p>
+                What sets Top Value apart from other programming and development
+                companies is its capabilities Unique understanding of client
+                requirements accurately.
+              </p>
+            </div>
+            <div class="feature wow fadeInUp" data-wow-delay=".4s">
+              <img src="../images/3 – 1/Group 72614.svg" />
+              <h3>Experience</h3>
+              <p>
+                We know what works and how you need it, our deep knowledge of
+                programming and development It enables us to develop and
+                innovate programs and services that suit your requirements.
+              </p>
+            </div>
+            <div class="feature wow fadeInUp" data-wow-delay=".6s">
+              <img src="../images/3 – 1/Group 72616.png" />
+              <h3>Excellence in work</h3>
+              <p>
+                Through the ability to create applications by using the latest
+                programming languages And relying on the latest methods and
+                tools
+              </p>
+            </div>
+            <div class="feature wow fadeInUp" data-wow-delay=".8s">
+              <img src="../images/3 – 1/Group 72618.png" />
+              <h3>Technical Support</h3>
+              <p>
+                Providing technical support after the delivery of any service or
+                application to ensure its proper operation Perfect and help in
+                achieving his main goals
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="customers">
+      <div class="over">
+        <div class="container">
+          <div class="head wow fadeInUp">
+            <h1>Clients</h1>
+            <p>We reinvent your business through our services</p>
+          </div>
+          <div class="testmencial">
+            <div class="row">
+              <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".1s">
+                <div class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p>
+                          Lorem Ipsum is a virtual model placed in the designs
+                          for display The client has to visualize how to put the
+                          texts in the designs, whether they are Printed
+                          designs... brochures or flyers
+                        </p>
+                        <div class="info">
+                          <div class="profile">
+                            <img
+                              src="../images/Artboard-2/Group 480.png"
+                              alt=""
+                            />
+                            <div class="name">
+                              <h4>Mohamed hossam</h4>
+                              <p>web designer</p>
+                            </div>
+                          </div>
+                          <div class="icon">
+                            <i class="fa-solid fa-quote-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p>
+                          Lorem Ipsum is a virtual model placed in the designs
+                          for display The client has to visualize how to put the
+                          texts in the designs, whether they are Printed
+                          designs... brochures or flyers
+                        </p>
+                        <div class="info">
+                          <div class="profile">
+                            <img
+                              src="../images/Artboard-2/Group 480.png"
+                              alt=""
+                            />
+                            <div class="name">
+                              <h4>Mohamed hossam</h4>
+                              <p>web designer</p>
+                            </div>
+                          </div>
+                          <div class="icon">
+                            <i class="fa-solid fa-quote-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review">
+                        <p>
+                          Lorem Ipsum is a virtual model placed in the designs
+                          for display The client has to visualize how to put the
+                          texts in the designs, whether they are Printed
+                          designs... brochures or flyers
+                        </p>
+                        <div class="info">
+                          <div class="profile">
+                            <img
+                              src="../images/Artboard-2/Group 480.png"
+                              alt=""
+                            />
+                            <div class="name">
+                              <h4>Mohamed hossam</h4>
+                              <p>web designer</p>
+                            </div>
+                          </div>
+                          <div class="icon">
+                            <i class="fa-solid fa-quote-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="col-lg-6 center wow fadeInLeft" data-wow-delay=".1s">
+                <div class="users">
+                  <div class="user1">
+                    <img src="../images/Artboard-2/Group 348.png" alt="" />
+                  </div>
+                  <div class="user2">
+                    <img src="../images/Artboard-2/Group 480.png" alt="" />
+                  </div>
+                  <div class="user3">
+                    <img src="../images/Artboard-2/Group 348.png" alt="" />
+                  </div>
+                  <div class="user4">
+                    <img src="../images/Artboard-2/Group 480.png" alt="" />
+                  </div>
+                  <div class="user5">
+                    <img src="../images/Artboard-2/Group 348.png" alt="" />
+                  </div>
+                  <div class="user6">
+                    <img src="../images/Artboard-2/Group 348.png" alt="" />
+                  </div>
+                </div>
+                <div class="active-user center">
+                  <img src="../images/Artboard-2/Group 349.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="companies">
+          <div class="container">
+            <img src="../images/Artboard-2/Rectangle 73.png" />
+            <img src="../images/Artboard-2/Rectangle 74.png" />
+            <img src="../images/Artboard-2/Rectangle 75.png" />
+            <img src="../images/Artboard-2/Rectangle 76.png" />
+            <img src="../images/Artboard-2/Rectangle 77.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="image">
+        <img src="../images/Ornament/Ornament.png" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="logo">
+              <img src="../images/Image 5/Image 5.png" />
+            </div>
+            <div>
+              <p>
+                We add good value to your<br />
+                business technical
+              </p>
+            </div>
+            <div class="social">
+              <a href="#"> <i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 links">
+            <div class="services">
+              <p>Services</p>
+              <a href="#">programming</a>
+              <a href="#">Voiceover</a>
+              <a href="#">Design</a>
+              <a href="#">montage</a>
+            </div>
+            <div class="services">
+              <p>Links</p>
+              <a href="#">Contact us</a>
+              <a href="#">join us</a>
+              <a href="#">Clients</a>
+              <a href="#">Portfolio</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact">
+              <p>Contact information</p>
+              <a><i class="fa-solid fa-location-dot"></i> SYRIS - IDLIB</a>
+              <a><i class="fa-solid fa-phone"></i> 00352681552077</a>
+              <a href="#"
+                ><i class="fa-solid fa-envelope"></i>
+                info@topvaluecompany.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="copy-right">
+          <p>All rights reserved 2022 Top Value</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+      var swiper = new Swiper(".mySwiper", {
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 50,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

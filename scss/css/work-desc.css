@@ -110,6 +110,34 @@ body section .container .bottom button {
   color: #fff;
 }
 
+html[lang=en] body {
+  direction: ltr;
+}
+html[lang=en] body section .container div.head .icons {
+  left: unset;
+  right: 60px;
+}
+html[lang=en] body section .container div.head .image,
+html[lang=en] body section .container .work-pages .image {
+  margin-left: 0;
+  margin-right: 30px;
+}
+html[lang=en] body section .container .work-pages .page:nth-child(odd) .images .image1 {
+  margin-left: 0;
+  margin-right: 20px;
+}
+html[lang=en] body section .container .work-pages .page:nth-child(even) {
+  direction: rtl;
+}
+html[lang=en] body section .container .work-pages .page .desc {
+  padding-right: 0;
+  padding-left: 70px;
+}
+html[lang=en] body section .container .work-pages .page:nth-child(even) .desc {
+  padding-left: 0;
+  padding-right: 60px;
+}
+
 @media (max-width: 900px) {
   body section .container .work-pages .page,
 body section .container .work-pages .page:nth-child(even) {

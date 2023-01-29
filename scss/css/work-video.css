@@ -116,6 +116,10 @@ body section .container .bottom button {
   color: #fff;
 }
 
+html[lang=en] body {
+  direction: ltr;
+}
+
 @media (max-width: 1144px) {
   body section .container .work-pages .page2 .image1 {
     top: -150px;

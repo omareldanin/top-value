@@ -319,6 +319,31 @@ body {
       }
     }
   }
+  .filters {
+    margin: 30px auto 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: fit-content;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.03);
+    max-width: 800px;
+    a {
+      color: rgba(44, 44, 44, 1);
+      width: 190px;
+      height: 50px;
+      font-size: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+      flex-grow: 1;
+      transition: 300ms;
+    }
+    .active {
+      background-color: rgba(0, 208, 176, 1);
+      color: #fff;
+    }
+  }
   .bottom {
     text-align: center;
     margin: 80px 0 0;
@@ -386,17 +411,58 @@ body {
       padding: 10px 0;
     }
   }
-  body nav .container .links .open-ul {
+  body .open .container .links ul {
     height: 135px;
   }
   body nav .container .buttons .bars {
     display: block;
   }
 }
+html[lang="en"] {
+  body nav .container .buttons .lang {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  body nav .container .buttons .ask-service a {
+    direction: rtl;
+  }
+  body nav .container .buttons .bars {
+    margin-right: 0 !important;
+    margin-left: 10px !important;
+  }
+  body footer .col-md-4:first-child .social a,
+  body footer .col-md-4:last-child .contact a i {
+    margin-right: 15px;
+    margin-left: 0;
+  }
+  body .request-form .form-container form .mb-3 div label {
+    right: unset;
+    left: 55px;
+  }
+  body .request-form .form-container form .mb-3 div .icon,
+  body .request-form .form-container form .details div label {
+    right: unset;
+    left: 15px;
+  }
+  body .request-form .form-container form .mb-3 div .arrow-icon {
+    left: unset;
+    right: 20px;
+  }
+  body .request-form .form-container .head img {
+    left: unset;
+    right: 0;
+  }
+  body .request-form .form-container form .mb-3 div .icon {
+    padding-left: 0;
+  }
+}
 @media (max-width: 630px) {
   body footer .row > * {
     width: unset;
     margin-bottom: 25px;
+  }
+  body footer .links .services:first-child {
+    margin-right: 0;
   }
   body footer .links .services:first-child {
     margin-right: 0;
@@ -416,6 +482,19 @@ body {
   }
   body nav .container .logo img {
     width: 150px;
+  }
+  body .request-form {
+    display: block;
+    .form-container {
+      margin: 30px auto;
+    }
+  }
+  body .request-form .form-container form .mb-3,
+  body .request-form .form-container form .mb-4 {
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
   }
 }
 @media (max-width: 530px) {

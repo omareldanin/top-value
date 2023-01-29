@@ -158,6 +158,23 @@ body footer {
   padding: 120px 0 80px;
 }
 
+html[lang=en] body {
+  direction: ltr;
+}
+html[lang=en] body section.our-works .head h1::after {
+  right: unset;
+}
+@media (max-width: 500px) {
+  html[lang=en] body section.our-works .head h1,
+html[lang=en] body section.our-works .head h2 {
+    font-size: 26px;
+  }
+  html[lang=en] body section.our-works .head p {
+    font-size: 17px;
+    margin-top: 42px;
+  }
+}
+
 @media (max-width: 900px) {
   body section.our-works .how-to-work .row {
     padding: 0 14px !important;

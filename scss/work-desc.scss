@@ -105,6 +105,35 @@ body {
     }
   }
 }
+html[lang="en"] {
+  body {
+    direction: ltr;
+  }
+  body section .container div.head .icons {
+    left: unset;
+    right: 60px;
+  }
+  body section .container div.head .image,
+  body section .container .work-pages .image {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+  body section .container .work-pages .page:nth-child(odd) .images .image1 {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  body section .container .work-pages .page:nth-child(even) {
+    direction: rtl;
+  }
+  body section .container .work-pages .page .desc {
+    padding-right: 0;
+    padding-left: 70px;
+  }
+  body section .container .work-pages .page:nth-child(even) .desc {
+    padding-left: 0;
+    padding-right: 60px;
+  }
+}
 @media (max-width: 900px) {
   body section .container .work-pages .page,
   body section .container .work-pages .page:nth-child(even) {

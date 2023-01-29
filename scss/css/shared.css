@@ -337,6 +337,33 @@ body .openRequest-form .form-container {
     transform: scale(1);
   }
 }
+body .filters {
+  margin: 30px auto 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.03);
+  max-width: 800px;
+}
+body .filters a {
+  color: rgb(44, 44, 44);
+  width: 190px;
+  height: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: 300ms;
+}
+body .filters .active {
+  background-color: rgb(0, 208, 176);
+  color: #fff;
+}
 body .bottom {
   text-align: center;
   margin: 80px 0 0;
@@ -403,17 +430,57 @@ body .center {
   body nav .container .links ul li {
     padding: 10px 0;
   }
-  body nav .container .links .open-ul {
+  body .open .container .links ul {
     height: 135px;
   }
   body nav .container .buttons .bars {
     display: block;
   }
 }
+html[lang=en] body nav .container .buttons .lang {
+  margin-right: 0;
+  margin-left: 10px;
+}
+html[lang=en] body nav .container .buttons .ask-service a {
+  direction: rtl;
+}
+html[lang=en] body nav .container .buttons .bars {
+  margin-right: 0 !important;
+  margin-left: 10px !important;
+}
+html[lang=en] body footer .col-md-4:first-child .social a,
+html[lang=en] body footer .col-md-4:last-child .contact a i {
+  margin-right: 15px;
+  margin-left: 0;
+}
+html[lang=en] body .request-form .form-container form .mb-3 div label {
+  right: unset;
+  left: 55px;
+}
+html[lang=en] body .request-form .form-container form .mb-3 div .icon,
+html[lang=en] body .request-form .form-container form .details div label {
+  right: unset;
+  left: 15px;
+}
+html[lang=en] body .request-form .form-container form .mb-3 div .arrow-icon {
+  left: unset;
+  right: 20px;
+}
+html[lang=en] body .request-form .form-container .head img {
+  left: unset;
+  right: 0;
+}
+html[lang=en] body .request-form .form-container form .mb-3 div .icon {
+  padding-left: 0;
+}
+
 @media (max-width: 630px) {
   body footer .row > * {
     width: unset;
     margin-bottom: 25px;
+  }
+  body footer .links .services:first-child {
+    margin-right: 0;
   }
   body footer .links .services:first-child {
     margin-right: 0;
@@ -431,6 +498,20 @@ body .center {
   }
   body nav .container .logo img {
     width: 150px;
+  }
+  body .request-form {
+    display: block;
+  }
+  body .request-form .form-container {
+    margin: 30px auto;
+  }
+  body .request-form .form-container form .mb-3,
+body .request-form .form-container form .mb-4 {
+    flex-direction: column;
+  }
+  body .request-form .form-container form .mb-3 div,
+body .request-form .form-container form .mb-4 div {
+    width: 100%;
   }
 }
 @media (max-width: 530px) {

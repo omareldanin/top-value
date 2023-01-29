@@ -163,6 +163,22 @@ body section .container .bottom button {
   color: #fff;
 }
 
+html[lang=en] body {
+  direction: ltr;
+}
+html[lang=en] body section .container .desc {
+  padding-right: 0;
+  padding-left: 30px;
+}
+html[lang=en] body section .container .work-pages .page2 .image1 {
+  left: unset;
+  right: 0;
+}
+html[lang=en] body section .container div.header .icons {
+  left: unset;
+  right: 60px;
+}
+
 @media (max-width: 1144px) {
   body section .container .work-pages .page2 .image1 {
     top: -150px;

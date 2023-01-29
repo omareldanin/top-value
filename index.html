@@ -114,6 +114,7 @@
       <div class="container">
         <div class="logo">
           <img src="./images/Artboard–1/Image1.png" />
+          <img src="./images/Artboard–1/logo.png" />
         </div>
         <div class="links">
           <ul>
@@ -175,12 +176,18 @@
               </button>
             </div>
           </div>
-          <div class="col-md-5">
-            <img
-              class="wow fadeInLeft"
-              data-wow-delay=".9s"
-              src="./images/Group 72539/Group 72539.png"
-            />
+          <div class="col-md-5 wow fadeInLeft" data-wow-delay=".9s">
+            <img src="./images/Group 72539/Group 72539.png" />
+            <div class="animations">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
         <div class="more">
@@ -757,6 +764,39 @@
     <script src="js/wow.min.js"></script>
     <script>
       new WOW().init();
+      var swiper = new Swiper(".mySwiper", {
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 50,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
     </script>
     <script src="./js/main.js"></script>
   </body>

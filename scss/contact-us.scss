@@ -234,7 +234,107 @@ body {
     }
   }
 }
-
+html[lang="en"] {
+  body {
+    direction: ltr;
+  }
+  body
+    section.our-works
+    .contact
+    .row
+    .col-lg-6
+    .contact-form
+    form
+    .mb-3
+    div
+    label,
+  body
+    section.our-works
+    .contact
+    .row
+    .col-lg-6
+    .contact-form
+    form
+    .mb-4
+    div
+    label {
+    right: unset;
+    left: 55px;
+  }
+  body section.our-works .head h1::after {
+    right: unset;
+  }
+  body
+    section.our-works
+    .contact
+    .row
+    .col-lg-6
+    .contact-form
+    form
+    .mb-3
+    div
+    .icon,
+  body
+    section.our-works
+    .contact
+    .row
+    .col-lg-6
+    .contact-form
+    form
+    .mb-4
+    div
+    .icon {
+    right: unset;
+    left: 15px;
+  }
+  body
+    section.our-works
+    .contact
+    .row
+    .col-lg-6
+    .contact-form
+    form
+    .mb-4
+    div
+    .arrow-icon {
+    left: unset;
+    right: 20px;
+  }
+  body
+    section.our-works
+    .contact
+    .row
+    .col-lg-6
+    .contact-form
+    form
+    .details
+    div
+    label {
+    left: 15px;
+  }
+  body
+    section.our-works
+    .contact
+    .row
+    .col-lg-6
+    .contact-info
+    .info
+    .location
+    h5,
+  body
+    section.our-works
+    .contact
+    .row
+    .col-lg-6
+    .contact-info
+    .info
+    .email
+    div
+    h5 {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+}
 @media (max-width: 576px) {
   body section.our-works .contact-services .row div:nth-child(2) {
     border: none;
