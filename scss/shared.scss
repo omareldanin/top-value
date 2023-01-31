@@ -7,6 +7,162 @@ body {
   background-color: #f7f7f7 !important;
   direction: rtl;
   overflow-x: hidden;
+  .loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../../images/back.png) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 55555;
+    .logo {
+      text-align: end;
+      position: relative;
+      animation: 1.5s go ease-in-out;
+      .animate::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #eeeefa;
+        opacity: 0;
+        z-index: 1;
+        bottom: 0;
+        left: 30%;
+        animation: 4s growing2 2s infinite ease-in-out;
+      }
+      .animate::before,
+      .smoke {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #eeeefa;
+        opacity: 0;
+        z-index: 1;
+        bottom: 0;
+        left: 45%;
+        animation: 4s growing2 3s infinite ease-in-out;
+      }
+      .animate {
+        position: relative;
+        animation: 5s floating 0.5s infinite ease-in-out;
+        .smoke {
+          animation: 4s growing2 4s infinite ease-in-out;
+          left: 55% !important;
+        }
+        img {
+          width: 80%;
+          min-width: 250px;
+          transform: translateX(30%);
+        }
+        .head {
+          position: relative;
+          text-align: end;
+          span {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            opacity: 0;
+            background-color: #eeeefa;
+            animation: makeSmoke 1.5s 2 ease-in-out;
+          }
+          span:nth-child(2) {
+            animation-delay: 0.3s;
+          }
+          span:nth-child(3) {
+            animation-delay: 0.5s;
+          }
+          @keyframes makeSmoke {
+            0% {
+              width: 40px;
+              height: 40px;
+              bottom: 0;
+              opacity: 0;
+            }
+            50% {
+              width: 70px;
+              height: 70px;
+              bottom: -100px;
+              opacity: 0.2;
+            }
+            100% {
+              width: 90px;
+              height: 90px;
+              bottom: -120px;
+              opacity: 0;
+            }
+          }
+        }
+        .bottom {
+          img {
+            margin-top: -10px;
+          }
+        }
+      }
+      @keyframes growing2 {
+        0% {
+          width: 50px;
+          height: 50px;
+          opacity: 0;
+        }
+        50% {
+          width: 100px;
+          height: 100px;
+          opacity: 0.2;
+        }
+        100% {
+          width: 100px;
+          height: 100px;
+          opacity: 0;
+        }
+      }
+      @keyframes floating {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    }
+    @keyframes go {
+      0% {
+        transform: translate(50px, 200px);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+  }
+  .remove-spinner {
+    .logo {
+      animation: 0.5s go-ever ease-in-out;
+    }
+    @keyframes go-ever {
+      0% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-100px, -600px);
+        opacity: 1;
+      }
+    }
+  }
   nav {
     width: 100%;
     top: 0;
@@ -19,7 +175,7 @@ body {
       justify-content: space-between;
       align-items: center;
       background-color: #fff;
-      padding: 14px 60px;
+      padding: 0px 60px;
       .logo {
         img {
           width: 195px;
@@ -34,7 +190,108 @@ body {
           display: flex;
           align-items: center;
           li {
+            position: relative;
             margin: 0 15px;
+            padding: 28px 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            a {
+              position: relative;
+            }
+            > .main-link::after {
+              content: "";
+              display: block;
+              position: absolute;
+              transition: 300ms;
+              right: 0;
+              top: 25px;
+              width: 0;
+              height: 9px;
+              background-color: #00d0b0;
+              -webkit-clip-path: polygon(100% 1%, 100% 103%, -63% 100%);
+              clip-path: polygon(100% 1%, 100% 103%, -63% 100%);
+            }
+            .menu-1,
+            .menu-2 {
+              transition: 300ms;
+              flex-direction: column;
+              border-bottom: 1px solid #00d0b0;
+              padding: 20px 0;
+              position: absolute;
+              top: calc(100%);
+              right: calc(-100% - 30px);
+              background-color: #ffffff;
+              box-shadow: 0px 10px 60px #00000014;
+              height: 190px;
+              opacity: 0;
+              visibility: hidden;
+              z-index: 6666;
+              li {
+                margin: 0;
+                position: unset;
+                padding: 0;
+                cursor: pointer;
+                transition: 300ms;
+                a {
+                  padding: 5px 10px;
+                  width: 220px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  font-size: 12px;
+                  i {
+                    color: #b8babf;
+                    margin-left: 20px;
+                  }
+                }
+                span {
+                  display: flex;
+                  align-items: center;
+                  svg {
+                    margin-left: 10px;
+                    width: 25px;
+                    height: 25px;
+                    fill: #b8babf;
+                  }
+                }
+              }
+            }
+            .menu-1 {
+              li:hover {
+                background-color: #00d0b10e;
+                a span svg {
+                  fill: #00d0b0 !important;
+                }
+                i {
+                  color: #00d0b0;
+                }
+                .menu-2 {
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+            }
+            .menu-2 {
+              top: 0;
+              right: unset;
+              left: -100%;
+              height: 190px;
+              justify-content: space-around;
+            }
+          }
+          li:hover {
+            > a:first-child {
+              color: #00d0b0;
+              position: relative;
+            }
+            > a:first-child::after {
+              width: 100%;
+            }
+            .menu-1 {
+              opacity: 1;
+              visibility: visible;
+            }
           }
         }
         a {
@@ -42,6 +299,7 @@ body {
           font-size: 16px;
           text-decoration: none;
           font-weight: bold;
+          transition: 300ms;
         }
       }
       .buttons {
@@ -402,17 +660,27 @@ body {
     top: 100%;
     background-color: #fff;
     width: 100%;
-    z-index: 11;
+    z-index: 1;
     transition: 300ms;
     height: 0px;
     overflow: hidden;
     transition: 300ms;
+    opacity: 0;
     li {
       padding: 10px 0;
+      height: fit-content;
+      flex-direction: column;
+      align-items: flex-start;
+      .menu-1,
+      .menu-2 {
+        display: none;
+      }
     }
   }
   body .open .container .links ul {
-    height: 135px;
+    min-height: 135px;
+    opacity: 1;
+    overflow: visible;
   }
   body nav .container .buttons .bars {
     display: block;
@@ -454,6 +722,18 @@ html[lang="en"] {
   }
   body .request-form .form-container form .mb-3 div .icon {
     padding-left: 0;
+  }
+  body nav .container .links ul li .menu-1 li {
+    span svg {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+    i {
+      transform: rotateZ(180deg);
+    }
+    .menu-2 {
+      left: 100%;
+    }
   }
 }
 @media (max-width: 630px) {

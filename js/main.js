@@ -17,7 +17,8 @@ let bars = document.querySelector("nav .fa-bars"),
   filters = document.querySelectorAll("section .filters a"),
   containers = document.querySelectorAll("section .worksContainer .row"),
   startAudiobuttons = document.querySelectorAll(".audio i"),
-  audios = document.querySelectorAll("audio");
+  audios = document.querySelectorAll("audio"),
+  loadingSpinner = document.querySelector(".loading-spinner");
 
 lang.onclick = (e) => {
   const location = document.location.pathname;
@@ -32,6 +33,10 @@ window.onload = () => {
   if (mainLoading) {
     mainLoading.classList.remove("start-loading");
   }
+  loadingSpinner.classList.add("remove-spinner");
+  setTimeout(() => {
+    loadingSpinner.remove();
+  }, 500);
 };
 if (filters) {
   filters.forEach((item) => {

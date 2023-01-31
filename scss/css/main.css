@@ -12,6 +12,235 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+body .loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../../images/back.png) center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 55555;
+}
+body .loading-spinner .logo {
+  text-align: end;
+  position: relative;
+  -webkit-animation: 1.5s go ease-in-out;
+          animation: 1.5s go ease-in-out;
+}
+body .loading-spinner .logo .animate::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eeeefa;
+  opacity: 0;
+  z-index: 1;
+  bottom: 0;
+  left: 30%;
+  -webkit-animation: 4s growing2 2s infinite ease-in-out;
+          animation: 4s growing2 2s infinite ease-in-out;
+}
+body .loading-spinner .logo .animate::before,
+body .loading-spinner .logo .smoke {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eeeefa;
+  opacity: 0;
+  z-index: 1;
+  bottom: 0;
+  left: 45%;
+  -webkit-animation: 4s growing2 3s infinite ease-in-out;
+          animation: 4s growing2 3s infinite ease-in-out;
+}
+body .loading-spinner .logo .animate {
+  position: relative;
+  -webkit-animation: 5s floating 0.5s infinite ease-in-out;
+          animation: 5s floating 0.5s infinite ease-in-out;
+}
+body .loading-spinner .logo .animate .smoke {
+  -webkit-animation: 4s growing2 4s infinite ease-in-out;
+          animation: 4s growing2 4s infinite ease-in-out;
+  left: 55% !important;
+}
+body .loading-spinner .logo .animate img {
+  width: 80%;
+  min-width: 250px;
+  transform: translateX(30%);
+}
+body .loading-spinner .logo .animate .head {
+  position: relative;
+  text-align: end;
+}
+body .loading-spinner .logo .animate .head span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0;
+  background-color: #eeeefa;
+  -webkit-animation: makeSmoke 1.5s 2 ease-in-out;
+          animation: makeSmoke 1.5s 2 ease-in-out;
+}
+body .loading-spinner .logo .animate .head span:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+body .loading-spinner .logo .animate .head span:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+@-webkit-keyframes makeSmoke {
+  0% {
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 70px;
+    height: 70px;
+    bottom: -100px;
+    opacity: 0.2;
+  }
+  100% {
+    width: 90px;
+    height: 90px;
+    bottom: -120px;
+    opacity: 0;
+  }
+}
+@keyframes makeSmoke {
+  0% {
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 70px;
+    height: 70px;
+    bottom: -100px;
+    opacity: 0.2;
+  }
+  100% {
+    width: 90px;
+    height: 90px;
+    bottom: -120px;
+    opacity: 0;
+  }
+}
+body .loading-spinner .logo .animate .bottom img {
+  margin-top: -10px;
+}
+@-webkit-keyframes growing2 {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  50% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.2;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+@keyframes growing2 {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  50% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.2;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes go {
+  0% {
+    transform: translate(50px, 200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes go {
+  0% {
+    transform: translate(50px, 200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+body .remove-spinner .logo {
+  -webkit-animation: 0.5s go-ever ease-in-out;
+          animation: 0.5s go-ever ease-in-out;
+}
+@-webkit-keyframes go-ever {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100px, -600px);
+    opacity: 1;
+  }
+}
+@keyframes go-ever {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100px, -600px);
+    opacity: 1;
+  }
+}
 body .request-form {
   position: fixed;
   top: 0;
@@ -478,26 +707,6 @@ body .header .container .row .col-md-5:last-child .animate .head span:nth-child(
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
-@-webkit-keyframes makeSmoke {
-  0% {
-    width: 40px;
-    height: 40px;
-    bottom: 0;
-    opacity: 0;
-  }
-  50% {
-    width: 70px;
-    height: 70px;
-    bottom: -100px;
-    opacity: 0.2;
-  }
-  100% {
-    width: 90px;
-    height: 90px;
-    bottom: -120px;
-    opacity: 0;
-  }
-}
 @keyframes makeSmoke {
   0% {
     width: 40px;
@@ -555,17 +764,6 @@ body .header .container .row .col-md-5:last-child .animate .bottom img {
     opacity: 0;
   }
 }
-@-webkit-keyframes floating {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 @keyframes floating {
   0% {
     transform: translateY(0);
@@ -575,16 +773,6 @@ body .header .container .row .col-md-5:last-child .animate .bottom img {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@-webkit-keyframes go {
-  0% {
-    transform: translate(50px, 200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 1;
   }
 }
 @keyframes go {
