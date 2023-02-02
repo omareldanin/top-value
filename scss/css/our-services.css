@@ -49,10 +49,11 @@ body section.our-services .services .row .col {
   visibility: visible;
 }
 body section.our-services .services .row .col .service {
+  text-decoration: none;
+  display: inline-block;
   background-color: #fff;
   padding: 30px 20px 40px 20px;
   border-radius: 24px;
-  height: 100%;
 }
 body section.our-services .services .row .col .service .icon {
   position: relative;

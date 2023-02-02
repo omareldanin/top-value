@@ -69,6 +69,8 @@ body section.our-works .row .col {
   display: none;
 }
 body section.our-works .row .work {
+  display: block;
+  text-decoration: none;
   background-color: #fff;
   border-radius: 24px;
   overflow: hidden;

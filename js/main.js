@@ -18,7 +18,15 @@ let bars = document.querySelector("nav .fa-bars"),
   containers = document.querySelectorAll("section .worksContainer .row"),
   startAudiobuttons = document.querySelectorAll(".audio i"),
   audios = document.querySelectorAll("audio"),
-  loadingSpinner = document.querySelector(".loading-spinner");
+  loadingSpinner = document.querySelector(".loading-spinner"),
+  openSubMenuButton = document.querySelectorAll("nav ul li .fa-angle-down"),
+  openSubMenuButton2 = document.querySelectorAll(
+    "nav ul li .menu-1 .fa-caret-left"
+  ),
+  customersPhotos = document.querySelectorAll(".testmencial .users div img"),
+  customersReviewsPaginations = document.querySelectorAll(
+    ".testmencial .mySwiper2 .swiper-pagination span"
+  );
 
 lang.onclick = (e) => {
   const location = document.location.pathname;
@@ -37,6 +45,9 @@ window.onload = () => {
   setTimeout(() => {
     loadingSpinner.remove();
   }, 500);
+  if (customersPhotos[0]) {
+    customersPhotos[0].click();
+  }
 };
 if (filters) {
   filters.forEach((item) => {
@@ -108,6 +119,11 @@ videos.forEach((item) => {
     const pauseButton = parent.children[0];
     pauseButton.classList.remove("start");
   });
+  item.addEventListener("play", (e) => {
+    const parent = item.parentNode;
+    const pauseButton = parent.children[0];
+    pauseButton.classList.add("start");
+  });
 });
 
 startAudiobuttons.forEach((button) => {
@@ -172,3 +188,56 @@ addEventsToInputs(contactUsInputs);
 formContainer.onclick = (e) => {
   e.stopPropagation();
 };
+
+openSubMenuButton.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    openSubMenuButton.forEach((item) => {
+      const parent = item.parentNode;
+      parent.classList.remove("active");
+      parent.children[2].classList.remove("open-menu");
+    });
+    const parent = e.target.parentNode;
+    if (e.target.classList.value.includes("opened")) {
+      e.target.classList.remove("opened");
+      parent.classList.remove("active");
+      parent.children[2].classList.remove("open-menu");
+    } else {
+      e.target.classList.add("opened");
+      parent.children[2].classList.add("open-menu");
+      parent.classList.add("active");
+    }
+  });
+});
+openSubMenuButton2.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    openSubMenuButton2.forEach((item) => {
+      const parent = item.parentNode.parentNode;
+      parent.classList.remove("active");
+      parent.children[1].classList.remove("open-menu2");
+    });
+    const parent = e.target.parentNode.parentNode;
+    if (e.target.classList.value.includes("opened")) {
+      e.target.classList.remove("opened");
+      parent.classList.remove("active");
+      parent.children[1].classList.remove("open-menu2");
+    } else {
+      e.target.classList.add("opened");
+      parent.children[1].classList.add("open-menu2");
+      parent.classList.add("active");
+    }
+  });
+});
+customersPhotos.forEach((img, index) => {
+  img.addEventListener("click", (e) => {
+    customersReviewsPaginations[index].click();
+    const activeImage = document.querySelector(".active-user");
+    activeImage.style.background = `url(${e.target.src})`;
+    activeImage.style.backgroundRepeat = "no-repeat";
+    activeImage.style.backgroundSize = "cover";
+  });
+});
+customersReviewsPaginations.forEach((item, index) => {
+  item.addEventListener("click", (e) => {
+    customersPhotos[index].click();
+  });
+});

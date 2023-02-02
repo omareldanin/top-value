@@ -41,10 +41,11 @@ body {
           margin-bottom: 20px;
           visibility: visible;
           .service {
+            text-decoration: none;
+            display: inline-block;
             background-color: #fff;
             padding: 30px 20px 40px 20px;
             border-radius: 24px;
-            height: 100%;
             .icon {
               position: relative;
               height: 160px;

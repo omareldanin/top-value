@@ -15,9 +15,7 @@ body .loading-spinner {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(../../images/back.png) center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #0f0b33;
   z-index: 55555;
 }
 body .loading-spinner .logo {
@@ -26,44 +24,10 @@ body .loading-spinner .logo {
   -webkit-animation: 1.5s go ease-in-out;
           animation: 1.5s go ease-in-out;
 }
-body .loading-spinner .logo .animate::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #eeeefa;
-  opacity: 0;
-  z-index: 1;
-  bottom: 0;
-  left: 30%;
-  -webkit-animation: 4s growing2 2s infinite ease-in-out;
-          animation: 4s growing2 2s infinite ease-in-out;
-}
-body .loading-spinner .logo .animate::before,
-body .loading-spinner .logo .smoke {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #eeeefa;
-  opacity: 0;
-  z-index: 1;
-  bottom: 0;
-  left: 45%;
-  -webkit-animation: 4s growing2 3s infinite ease-in-out;
-          animation: 4s growing2 3s infinite ease-in-out;
-}
 body .loading-spinner .logo .animate {
   position: relative;
   -webkit-animation: 5s floating 0.5s infinite ease-in-out;
           animation: 5s floating 0.5s infinite ease-in-out;
-}
-body .loading-spinner .logo .animate .smoke {
-  -webkit-animation: 4s growing2 4s infinite ease-in-out;
-          animation: 4s growing2 4s infinite ease-in-out;
-  left: 55% !important;
 }
 body .loading-spinner .logo .animate img {
   width: 80%;
@@ -84,8 +48,8 @@ body .loading-spinner .logo .animate .head span {
   border-radius: 50%;
   opacity: 0;
   background-color: #eeeefa;
-  -webkit-animation: makeSmoke 1.5s 2 ease-in-out;
-          animation: makeSmoke 1.5s 2 ease-in-out;
+  -webkit-animation: makeSmoke 1.5s infinite ease-in-out;
+          animation: makeSmoke 1.5s infinite ease-in-out;
 }
 body .loading-spinner .logo .animate .head span:nth-child(2) {
   -webkit-animation-delay: 0.3s;
@@ -242,8 +206,8 @@ body nav {
   width: 100%;
   top: 0;
   left: 0;
-  height: 70px;
-  margin-top: 25px;
+  padding-top: 25px;
+  transition: 300ms;
 }
 body nav .container {
   position: relative;
@@ -274,6 +238,9 @@ body nav .container .links ul li {
   display: flex;
   align-items: center;
 }
+body nav .container .links ul li .fa-angle-down {
+  display: none;
+}
 body nav .container .links ul li a {
   position: relative;
 }
@@ -301,7 +268,7 @@ body nav .container .links ul li .menu-2 {
   right: calc(-100% - 30px);
   background-color: #ffffff;
   box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.0784313725);
-  height: 200;
+  height: 200px;
   opacity: 0;
   visibility: hidden;
   z-index: 6666;
@@ -357,7 +324,6 @@ body nav .container .links ul li .menu-2 {
   top: 0;
   right: unset;
   left: -100%;
-  height: 190px;
   justify-content: space-around;
 }
 body nav .container .links ul li:hover > a:first-child {
@@ -424,6 +390,16 @@ body nav .container .buttons .bars i {
   font-size: 30px;
   color: #2b225c;
 }
+body .fixedTop {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 0 13px 2px #e3e3e3;
+  z-index: 1000;
+  padding: 10px 0;
+}
+body .fixedTop .container {
+  position: unset;
+}
 body footer {
   position: absolute;
   overflow: hidden;
@@ -436,6 +412,7 @@ body footer .image {
   position: absolute;
   right: -302px;
   bottom: -195px;
+  z-index: -1;
 }
 body footer .image img {
   width: 90%;
@@ -746,6 +723,14 @@ body .center {
   body footer .row > * {
     width: unset;
   }
+  body .open .container .links ul {
+    min-height: 175px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    opacity: 1;
+    overflow: visible;
+  }
   body nav .container .links ul {
     position: absolute;
     display: block;
@@ -757,29 +742,102 @@ body .center {
     transition: 300ms;
     height: 0px;
     overflow: hidden;
-    transition: 300ms;
+    transition: 200ms;
     opacity: 0;
+    border-bottom: 1px solid #00d0b0;
   }
   body nav .container .links ul li {
-    padding: 10px 0;
+    padding: 0px 15px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     flex-direction: column;
     align-items: flex-start;
+    margin: 20px 0;
+  }
+  body nav .container .links ul li a {
+    width: 100%;
+  }
+  body nav .container .links ul li i {
+    position: absolute;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  body nav .container .links ul li i:hover {
+    color: #00d0b0;
   }
   body nav .container .links ul li .menu-1,
 body nav .container .links ul li .menu-2 {
-    display: none;
-  }
-  body .open .container .links ul {
-    min-height: 135px;
+    position: relative;
+    background-color: #fafafa;
+    margin-top: 10px;
+    top: unset;
+    right: unset;
+    left: unset;
+    width: 100%;
+    min-height: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
     opacity: 1;
-    overflow: visible;
+    visibility: visible;
+    box-shadow: none;
+  }
+  body nav .container .links ul li .menu-1 li,
+body nav .container .links ul li .menu-2 li {
+    transform: translatex(25px);
+    opacity: 0;
+  }
+  body nav .container .links ul li .menu-1 li a,
+body nav .container .links ul li .menu-2 li a {
+    width: 100%;
+  }
+  body nav .container .links ul li .menu-1 .active a i,
+body nav .container .links ul li .menu-2 .active a i {
+    color: #00d0b0 !important;
+  }
+  body nav .container .links ul li .open-menu {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  body nav .container .links ul li .open-menu li {
+    transform: translatex(0);
+    opacity: 1;
+  }
+  body nav .container .links ul li .open-menu2 {
+    height: 120px;
+  }
+  body nav .container .links ul .active > a:first-child {
+    color: #00d0b0;
+    position: relative;
+  }
+  body nav .container .links ul .active > a:first-child::after {
+    width: 100%;
+  }
+  body nav .container .links ul .active i {
+    color: #00d0b0;
   }
   body nav .container .buttons .bars {
     display: block;
   }
+  html[lang=en] body nav .container .links ul li i {
+    left: unset;
+    right: 20px;
+  }
+  html[lang=en] body nav .container .links ul li .menu-1 li .menu-2 {
+    left: unset !important;
+  }
+}
+html[lang=en] body .loading-spinner .logo .animate img {
+  transform: translate(10px);
 }
 html[lang=en] body nav .container .buttons .lang {
   margin-right: 0;

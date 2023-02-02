@@ -152,6 +152,7 @@ body section.our-works1 .row .col .image {
   margin-bottom: 30px;
 }
 body section.our-works1 .row .col .image img {
+  border-radius: 9px;
   width: 100%;
 }
 body section.our-works1 .row .col .desc h3 {
