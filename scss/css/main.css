@@ -1625,6 +1625,16 @@ html[lang=en] body .header .container .row .col-md-5:last-child .smoke {
     opacity: 1;
   }
 }
+html[lang=en] body nav .container .links ul li .menu-1 li span svg {
+  margin-left: 0;
+  margin-right: 10px;
+}
+html[lang=en] body nav .container .links ul li .menu-1 li i {
+  transform: rotateZ(180deg);
+}
+html[lang=en] body nav .container .links ul li .menu-1 li .menu-2 {
+  left: 100%;
+}
 
 @media (max-width: 992px) {
   body section.customers .over .container .col-lg-6:last-child {
@@ -1774,6 +1784,13 @@ body nav .container .links ul li .menu-2 .active a i {
   }
   body nav .container .buttons .bars {
     display: block;
+  }
+  html[lang=en] body nav .container .links ul li i {
+    left: unset;
+    right: 20px;
+  }
+  html[lang=en] body nav .container .links ul li .menu-1 li .menu-2 {
+    left: unset !important;
   }
 }
 @media (max-width: 630px) {
