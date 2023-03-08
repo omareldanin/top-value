@@ -140,30 +140,30 @@ html[lang=en] body section .container .work-pages .page:nth-child(even) .desc {
 
 @media (max-width: 900px) {
   body section .container .work-pages .page,
-body section .container .work-pages .page:nth-child(even) {
+  body section .container .work-pages .page:nth-child(even) {
     flex-direction: column;
     margin-bottom: 30px;
   }
   body section .container .work-pages .page .desc,
-body section .container .work-pages .page:nth-child(even) .desc {
+  body section .container .work-pages .page:nth-child(even) .desc {
     padding: 0;
     margin: 30px 0 50px;
   }
 }
 @media (max-width: 600px) {
   body section .container div.head,
-body section .container div.work-pages {
+  body section .container div.work-pages {
     flex-direction: column;
     align-items: flex-start;
     border-radius: 23px;
     padding: 30px 23px;
   }
   body section .container div.head .icons,
-body section .container div.work-pages .icons {
+  body section .container div.work-pages .icons {
     left: 23px;
   }
   body section .container div.head .image,
-body section .container div.work-pages .image {
+  body section .container div.work-pages .image {
     margin-bottom: 20px;
   }
 }

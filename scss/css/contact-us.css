@@ -11,7 +11,6 @@ body section.our-works .head {
 }
 body section.our-works .head h1 {
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 38px;
@@ -131,7 +130,6 @@ body section.our-works .contact .row .col-lg-6 .contact-form form .mb-3 div .arr
 body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div .icon,
 body section.our-works .contact .row .col-lg-6 .contact-form form .mb-4 div .arrow-icon {
   position: absolute;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   top: 50%;

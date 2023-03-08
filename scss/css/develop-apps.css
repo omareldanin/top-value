@@ -12,7 +12,6 @@ body section.our-works .head {
 body section.our-works .head h1,
 body section.our-works .head h2 {
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 38px;
@@ -166,7 +165,7 @@ html[lang=en] body section.our-works .head h1::after {
 }
 @media (max-width: 500px) {
   html[lang=en] body section.our-works .head h1,
-html[lang=en] body section.our-works .head h2 {
+  html[lang=en] body section.our-works .head h2 {
     font-size: 26px;
   }
   html[lang=en] body section.our-works .head p {
@@ -188,7 +187,7 @@ html[lang=en] body section.our-works .head h2 {
     padding: 0 10px;
   }
   body section.our-works .features,
-body section.our-works .how-to-work {
+  body section.our-works .how-to-work {
     padding: 60px 10px;
   }
   body section.our-works .how-to-work .bottom button {

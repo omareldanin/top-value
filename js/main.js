@@ -227,6 +227,7 @@ openSubMenuButton2.forEach((item) => {
     }
   });
 });
+
 customersPhotos.forEach((img, index) => {
   img.addEventListener("click", (e) => {
     customersReviewsPaginations[index].click();
@@ -236,8 +237,20 @@ customersPhotos.forEach((img, index) => {
     activeImage.style.backgroundSize = "cover";
   });
 });
+
 customersReviewsPaginations.forEach((item, index) => {
   item.addEventListener("click", (e) => {
     customersPhotos[index].click();
   });
 });
+
+if (customersPhotos.length > 0) {
+  let index = -1;
+  let id = setInterval(() => {
+    index++;
+    if (index === customersPhotos.length) {
+      index = 0;
+    }
+    customersPhotos[index].click();
+  }, 3000);
+}

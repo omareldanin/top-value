@@ -11,7 +11,6 @@ body section.our-works .head {
 }
 body section.our-works .head h1 {
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 38px;
@@ -43,7 +42,6 @@ body section.our-works .filters {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 4px;
@@ -115,7 +113,6 @@ body section.our-works .row .work .desc p {
 }
 body section.our-works .row .work .desc span {
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 4px 15px;

@@ -14,7 +14,6 @@ body section .container .head {
 }
 body section .container .head h1 {
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 38px;
@@ -132,12 +131,12 @@ html[lang=en] body {
 }
 @media (max-width: 900px) {
   body section .container .work-pages .page,
-body section .container .work-pages .page:nth-child(even) {
+  body section .container .work-pages .page:nth-child(even) {
     flex-direction: column;
     margin-bottom: 30px;
   }
   body section .container .work-pages .page .desc,
-body section .container .work-pages .page:nth-child(even) .desc {
+  body section .container .work-pages .page:nth-child(even) .desc {
     padding: 0;
     margin: 30px 0 50px;
   }
@@ -148,30 +147,30 @@ body section .container .work-pages .page:nth-child(even) .desc {
     align-items: flex-start;
   }
   body section .container div.header .image,
-body section .container div.header .work3Image,
-body section .container div.header .work2Image {
+  body section .container div.header .work3Image,
+  body section .container div.header .work2Image {
     margin-bottom: 30px;
   }
   body section .container div.header .desc {
     padding: 0;
   }
   body section .container .work-pages .page1,
-body section .container .work-pages .page2 {
+  body section .container .work-pages .page2 {
     flex-direction: column;
   }
   body section .container .work-pages .page1 .image1,
-body section .container .work-pages .page1 .image2,
-body section .container .work-pages .page2 .image1,
-body section .container .work-pages .page2 .image2 {
+  body section .container .work-pages .page1 .image2,
+  body section .container .work-pages .page2 .image1,
+  body section .container .work-pages .page2 .image2 {
     position: unset;
     width: 100%;
   }
   body section .container .work-pages .page1 .image,
-body section .container .work-pages .page2 .image {
+  body section .container .work-pages .page2 .image {
     width: 100%;
   }
   body section .container .work-pages .page1 .desc,
-body section .container .work-pages .page2 .desc {
+  body section .container .work-pages .page2 .desc {
     width: 100%;
     padding-right: 0;
   }
@@ -190,7 +189,7 @@ body section .container .work-pages .page2 .desc {
     width: 100%;
   }
   body section .container div.header,
-body section .container .work-pages {
+  body section .container .work-pages {
     padding: 30px 20px;
     border-radius: 30px;
   }
