@@ -18,7 +18,7 @@ body .loading-spinner {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #0f0b33;
+  background: linear-gradient(150deg, #0a8884, #13094a);
   z-index: 55555;
 }
 body .loading-spinner .logo {
@@ -504,9 +504,8 @@ body .fixedTop .bars i {
   color: #0f0b33 !important;
 }
 body .header {
-  background: url(../../images/Group72717@2x.png);
+  background: linear-gradient(150deg, #0a8884, #13094a);
   background-size: cover;
-  background-position: -22px -2px;
   background-repeat: no-repeat;
   padding-top: 130px;
   position: relative;
@@ -806,8 +805,9 @@ body .header .container .more .contact-us a {
 }
 body .header .our-number {
   margin-top: 180px;
-  padding: 30px 0;
+  padding: 40px 0;
   min-height: 200px;
+  background-color: rgba(0, 0, 0, 0.1647058824);
 }
 body .header .our-number .row .col {
   display: flex;

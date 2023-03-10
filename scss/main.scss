@@ -15,7 +15,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #0f0b33;
+    background: linear-gradient(150deg, #0a8884, #13094a);
     z-index: 55555;
     .logo {
       text-align: end;
@@ -505,9 +505,8 @@ body {
   }
 
   .header {
-    background: url(../../images/Group72717@2x.png);
+    background: linear-gradient(150deg, #0a8884, #13094a);
     background-size: cover;
-    background-position: -22px -2px;
     background-repeat: no-repeat;
     padding-top: 130px;
     position: relative;
@@ -814,8 +813,9 @@ body {
     }
     .our-number {
       margin-top: 180px;
-      padding: 30px 0;
+      padding: 40px 0;
       min-height: 200px;
+      background-color: #0000002a;
       .row {
         .col {
           display: flex;
