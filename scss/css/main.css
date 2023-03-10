@@ -18,7 +18,7 @@ body .loading-spinner {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(150deg, #0a8884, #13094a);
+  background: linear-gradient(to right, #0a8884, #13094a);
   z-index: 55555;
 }
 body .loading-spinner .logo {
@@ -504,7 +504,7 @@ body .fixedTop .bars i {
   color: #0f0b33 !important;
 }
 body .header {
-  background: linear-gradient(150deg, #0a8884, #13094a);
+  background: linear-gradient(to right, #0a8884, #13094a);
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 130px;
