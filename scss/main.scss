@@ -1015,6 +1015,9 @@ body {
       overflow: visible;
       margin-top: 60px;
       .swiper-slide {
+        height: unset !important;
+        display: flex;
+        flex-grow: 0;
         .work {
           display: block;
           background-color: #fff !important;

@@ -994,6 +994,11 @@ body section.portfolio .swiper {
   overflow: visible;
   margin-top: 60px;
 }
+body section.portfolio .swiper .swiper-slide {
+  height: unset !important;
+  display: flex;
+  flex-grow: 0;
+}
 body section.portfolio .swiper .swiper-slide .work {
   display: block;
   background-color: #fff !important;

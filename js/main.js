@@ -148,23 +148,33 @@ startAudiobuttons.forEach((button) => {
     };
   });
 });
-audios.forEach((item) => {
-  item.addEventListener("pause", (e) => {
-    const parent = item.parentNode;
+audios.forEach((audio) => {
+  audio.addEventListener("pause", (e) => {
+    const parent = audio.parentNode;
     const pauseButton = parent.children[2];
     pauseButton.classList.add("fa-play");
     pauseButton.classList.remove("fa-pause");
   });
-});
-audios.forEach((audio) => {
   audio.addEventListener("timeupdate", (e) => {
     const parent = audio.parentNode.parentNode.parentNode;
-    const progress1 = parent.children[0].children[0];
-    const progress2 = parent.children[2].children[0];
-    progress1.setAttribute("value", audio.currentTime / audio.duration);
-    progress2.setAttribute("value", audio.currentTime / audio.duration);
+    const value = Math.round((audio.currentTime / audio.duration) * 100);
+    let classes = parent.classList;
+    parent.classList.remove(classes[1]);
+    parent.classList.add(`progress--${value}`);
+  });
+  audio.addEventListener("ended", (e) => {
+    const parent = audio.parentNode.parentNode.parentNode;
+    let classes = parent.classList;
+    parent.classList.remove(classes[1]);
+    parent.classList.add(`progress--0`);
+
+    const parent2 = audio.parentNode;
+    const pauseButton = parent2.children[2];
+    pauseButton.classList.add("fa-play");
+    pauseButton.classList.remove("fa-pause");
   });
 });
+
 const addEventsToInputs = (inputs) => {
   inputs.forEach((item) => {
     item.addEventListener("focus", (e) => {

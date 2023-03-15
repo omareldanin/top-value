@@ -7,6 +7,9 @@ body {
   background-color: #f7f7f7 !important;
   direction: rtl;
   overflow-x: hidden;
+  a {
+    text-decoration: none !important;
+  }
   .loading-spinner {
     position: fixed;
     top: 0;

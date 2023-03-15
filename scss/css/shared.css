@@ -9,6 +9,9 @@ body {
   direction: rtl;
   overflow-x: hidden;
 }
+body a {
+  text-decoration: none !important;
+}
 body .loading-spinner {
   position: fixed;
   top: 0;

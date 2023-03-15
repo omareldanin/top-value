@@ -333,20 +333,14 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="audio-work">
                 <div class="audio">
-                  <div id="waveform">
-                    <progress value="0" max="1"></progress>
-                    <img src="./images/waves.png" />
-                  </div>
-                  <div class="control">
-                    <div class="image">
-                      <audio controls src="./images/workes/<?php echo $type1[$i]['icon']?>"></audio>
-                      <img src="./images/Path 104624.svg" />
-                      <i class="fa-solid fa-play center"></i>
-                    </div>
-                  </div>
-                  <div id="waveform">
-                    <progress value="0" max="1"></progress>
-                    <img src="./images/waves.png" />
+                  <div class="progress--circle progress--0">
+                    <div class="control">
+                      <div class="image">
+                        <audio controls src="./images/workes/<?php echo $type1[$i]['icon']?>"></audio>
+                        <img src="./images/Path 104624.svg" />
+                        <i class="fa-solid fa-play center"></i>
+                      </div>
+                    </div> 
                   </div>
                 </div>
                 <div class="desc">
@@ -364,20 +358,14 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="audio-work">
                 <div class="audio">
-                  <div id="waveform">
-                    <progress value="0" max="1"></progress>
-                    <img src="./images/waves.png" />
-                  </div>
-                  <div class="control">
-                    <div class="image">
-                      <audio controls src="./images/workes/<?php echo $type2[$i]['icon']?>"></audio>
-                      <img src="./images/Path 104624.svg" />
-                      <i class="fa-solid fa-play center"></i>
-                    </div>
-                  </div>
-                  <div id="waveform">
-                    <progress value="0" max="1"></progress>
-                    <img src="./images/waves.png" />
+                <div class="progress--circle progress--0">
+                    <div class="control">
+                      <div class="image">
+                        <audio controls src="./images/workes/<?php echo $type2[$i]['icon']?>"></audio>
+                        <img src="./images/Path 104624.svg" />
+                        <i class="fa-solid fa-play center"></i>
+                      </div>
+                    </div> 
                   </div>
                 </div>
                 <div class="desc">
@@ -395,20 +383,14 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="audio-work">
                 <div class="audio">
-                  <div id="waveform">
-                    <progress value="0" max="1"></progress>
-                    <img src="./images/waves.png" />
-                  </div>
-                  <div class="control">
-                    <div class="image">
-                      <audio controls src="./images/workes/<?php echo $type3[$i]['icon']?>"></audio>
-                      <img src="./images/Path 104624.svg" />
-                      <i class="fa-solid fa-play center"></i>
-                    </div>
-                  </div>
-                  <div id="waveform">
-                    <progress value="0" max="1"></progress>
-                    <img src="./images/waves.png" />
+                  <div class="progress--circle progress--0">
+                      <div class="control">
+                        <div class="image">
+                          <audio controls src="./images/workes/<?php echo $type3[$i]['icon']?>"></audio>
+                          <img src="./images/Path 104624.svg" />
+                          <i class="fa-solid fa-play center"></i>
+                        </div>
+                      </div> 
                   </div>
                 </div>
                 <div class="desc">
@@ -426,20 +408,14 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="audio-work">
                 <div class="audio">
-                  <div id="waveform">
-                    <progress value="0" max="1"></progress>
-                    <img src="./images/waves.png" />
-                  </div>
-                  <div class="control">
-                    <div class="image">
-                      <audio controls src="./images/workes/<?php echo $type4[$i]['icon']?>"></audio>
-                      <img src="./images/Path 104624.svg" />
-                      <i class="fa-solid fa-play center"></i>
-                    </div>
-                  </div>
-                  <div id="waveform">
-                    <progress value="0" max="1"></progress>
-                    <img src="./images/waves.png" />
+                <div class="progress--circle progress--0">
+                    <div class="control">
+                      <div class="image">
+                        <audio controls src="./images/workes/<?php echo $type4[$i]['icon']?>"></audio>
+                        <img src="./images/Path 104624.svg" />
+                        <i class="fa-solid fa-play center"></i>
+                      </div>
+                    </div> 
                   </div>
                 </div>
                 <div class="desc">
