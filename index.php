@@ -14,7 +14,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./scss/css/main.css" />
     <link rel="stylesheet" href="./scss/css/all.min.css" />
@@ -1113,7 +1113,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
       </symbol>
     </svg>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
       new WOW().init();

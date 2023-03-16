@@ -1026,15 +1026,9 @@ body {
           .image {
             position: relative;
             width: 100%;
-            height: 280px;
-            background: linear-gradient(
-              180deg,
-              rgb(19 9 74 / 17%),
-              rgb(10 136 132 / 17%)
-            );
             .work-image {
               img {
-                width: 300px;
+                width: 100%;
               }
             }
             .icons {
