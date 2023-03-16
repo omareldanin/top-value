@@ -206,7 +206,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
             <button class="ask-service" onclick="toggleRequestForm()">
               <a
                 ><img src="./images/tool-box/tool-box.png" />
-                <span>إطلب خدمه</span></a
+                <span>اطلب خدمة</span></a
               >
             </button>
             <button class="lang">

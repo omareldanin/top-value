@@ -197,7 +197,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
             <button class="ask-service" onclick="toggleRequestForm()">
               <a
                 ><img src="./images/tool-box/tool-box.png" />
-                <span>إطلب خدمه</span></a
+                <span>اطلب خدمة</span></a
               >
             </button>
             <button class="lang">
@@ -319,7 +319,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
           <div class="head">
           <h2><?php echo $selectedServices[0]["titel"]?></h2>
             <p>
-          <?php echo $selectedServices[0]["sam_titel"]?>
+            نعرض أمامك أهم المزايا التي نقدمها من خلال خدمة <?php echo $selectedServices[0]["titel"]?> المقدمة للعملاء
             </p>
           </div>
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">

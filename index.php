@@ -302,7 +302,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
             <button class="ask-service" onclick="toggleRequestForm()">
               <a
                 ><img src="./images/tool-box/tool-box.png" />
-                <span>إطلب خدمه</span></a
+                <span>اطلب خدمة</span></a
               >
             </button>
             <button class="lang">
@@ -346,7 +346,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                 data-wow-delay=".9s"
                 onclick="toggleRequestForm()"
               >
-                <a><img src="./images/tool-box/tool-box.png" />إطلب خدمه</a>
+                <a><img src="./images/tool-box/tool-box.png" />اطلب خدمة</a>
               </button>
             </div>
           </div>
@@ -688,7 +688,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
         <div class="container">
           <div class="head wow fadeInUp">
             <h1>عملائنا</h1>
-            <p>نعيد ابتكار أعمالك من خلال خدمات نقدمها لك</p>
+            <p>آراء عملاء توب فاليو حول الخدمات المقدمة لهم</p>
           </div>
           <div class="testmencial">
             <div class="row">
@@ -703,9 +703,9 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                           <?php echo $clint['text']?>
                         </p>
                         <div class="info">
-                          <div class="profile" style="height: 100%;width: 100%;">
+                          <div class="profile" style="height: 100%;width: 100%; ">
                             <img
-                            style="height: 100px;width: 100px;border-radius: 500px;"
+                            style="height: 60px;width: 60px;border-radius: 500px;margin-left:10px"
                             src="./images/clint/<?php echo $clint['image']?>"
                               alt=""
                             />
