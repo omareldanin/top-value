@@ -40,14 +40,13 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
       <div class="container">
         <a href="index.php" class="logo">
           <img src="./images/Artboard–1/logo.png" />
-        </a>
-        <div class="links">
+        </a><div class="links">
           <ul>
             <li>
               <a class="main-link" href="index.php">الرئيسيه</a>
             </li>
             <li>
-              <a class="main-link" href="our-services.html">الخدمات</a>
+              <a class="main-link" href="our-services.php">الخدمات</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -90,7 +89,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
                     </span>
                   </a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="develop-apps.php?Services_id=5">
                     <span>
                       <svg>
@@ -99,11 +98,11 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
                       تقديم البرامج
                     </span>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </li>
             <li>
-              <a class="main-link" href="work.php">الاعمال</a>
+              <a class="main-link" href="work.php?type=1">الاعمال</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -154,7 +153,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
                     <li><a href="work1.php?type=1">هويات بصرية</a></li>
                     <li><a href="work1.php?type=2">سوشيال ميديا</a></li>
                     <li><a href="work1.php?type=3">عروض تقديمية</a></li>
-                    <li><a href="work1.php?type=4">تصميم مطبوعات</a></li>
+                    <li><a href="work1.php?type=4">تصميم الكتب</a></li>
                   </ul>
                 </li>
                 <li>
@@ -174,7 +173,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
                     <li><a href="work4.php?type=4">أنترو</a></li>
                   </ul>
                 </li>
-                <li>
+                <!-- <li>
                   <a>
                     <span>
                       <svg>
@@ -190,7 +189,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
                     <li><a href="work4.php?type=3">موشن غرافيك</a></li>
                     <li><a href="work4.php?type=4">أنترو</a></li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>
@@ -327,99 +326,43 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
             <div class="col">
               <div class="feature">
                 <img src="./images/3 – 1/Group 72611.svg" />
-                <h3>ميزة هنا</h3>
+                <h3><?php echo $selectedServices[0]["titel_1"]?></h3>
                 <p>
-                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                  انترنت
+                <?php echo $selectedServices[0]["same_titel_1"]?>
                 </p>
               </div>
             </div>
             <div class="col">
               <div class="feature">
                 <img src="./images/3 – 1/Group 72614.svg" />
-                <h3>ميزة هنا</h3>
+                
+                <h3><?php echo $selectedServices[0]["titel_2"]?></h3>
                 <p>
-                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                  انترنت
+                <?php echo $selectedServices[0]["same_titel_2"]?>
                 </p>
               </div>
             </div>
             <div class="col">
               <div class="feature">
                 <img src="./images/3 – 1/Group 72614.svg" />
-                <h3>ميزة هنا</h3>
+                
+                <h3><?php echo $selectedServices[0]["titel_3"]?></h3>
                 <p>
-                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                  انترنت
+                <?php echo $selectedServices[0]["same_titel_3"]?>
                 </p>
               </div>
             </div>
             <div class="col">
               <div class="feature">
                 <img src="./images/3 – 1/Group 72611.svg" />
-                <h3>ميزة هنا</h3>
+                
+                <h3><?php echo $selectedServices[0]["titel_4"]?></h3>
                 <p>
-                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                  انترنت
+                <?php echo $selectedServices[0]["same_titel_4"]?>
                 </p>
               </div>
             </div>
-            <div class="col">
-              <div class="feature">
-                <img src="./images/3 – 1/Group 72611.svg" />
-                <h3>ميزة هنا</h3>
-                <p>
-                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                  انترنت
-                </p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="feature">
-                <img src="./images/3 – 1/Group 72614.svg" />
-                <h3>ميزة هنا</h3>
-                <p>
-                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                  انترنت
-                </p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="feature">
-                <img src="./images/3 – 1/Group 72614.svg" />
-                <h3>ميزة هنا</h3>
-                <p>
-                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                  انترنت
-                </p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="feature">
-                <img src="./images/3 – 1/Group 72611.svg" />
-                <h3>ميزة هنا</h3>
-                <p>
-                  لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                  العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                  مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                  انترنت
-                </p>
-              </div>
-            </div>
+            
           </div>
         </div>
         <div class="how-to-work">
@@ -527,7 +470,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC);
             </div>
             <div class="services">
               <p>روابط</p>
-              <a href="contact-us.html">اتصل بنا</a>
+              <a href="contact-us.php">اتصل بنا</a>
               <a onclick="toggleRequestForm()"> انضم الينا</a>
               <a href="index.php#customers">عملائنا</a>
               <a href="work.php?type=1">معرض الاعمال</a>

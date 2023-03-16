@@ -54,7 +54,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               <a class="main-link" href="index.php">الرئيسيه</a>
             </li>
             <li>
-              <a class="main-link" href="our-services.html">الخدمات</a>
+              <a class="main-link" href="our-services.php">الخدمات</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -110,7 +110,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               </ul>
             </li>
             <li>
-              <a class="main-link" href="work.php">الاعمال</a>
+              <a class="main-link" href="work.php?type=1">الاعمال</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -466,7 +466,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
             </div>
             <div class="services">
               <p>روابط</p>
-              <a href="contact-us.html">اتصل بنا</a>
+              <a href="contact-us.php">اتصل بنا</a>
               <a onclick="toggleRequestForm()"> انضم الينا</a>
               <a href="index.php#customers">عملائنا</a>
               <a href="work.php?type=1">معرض الاعمال</a>

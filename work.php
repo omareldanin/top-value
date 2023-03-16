@@ -55,7 +55,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               <a class="main-link" href="index.php">الرئيسيه</a>
             </li>
             <li>
-              <a class="main-link" href="our-services.html">الخدمات</a>
+              <a class="main-link" href="our-services.php">الخدمات</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -111,7 +111,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               </ul>
             </li>
             <li>
-              <a class="main-link" href="work.php">الاعمال</a>
+              <a class="main-link" href="work.php?type=1">الاعمال</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -334,7 +334,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
           >
           <?php for ($i=0; $i < count($type1); $i++) { ?>
             <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
-              <a href="work-desc.html" class="work">
+              <a href="work-desc.php" class="work">
                 <div class="image center">
                   <div class="work-image">
                   <img class="work-image" style="height: 100%;width: 100%;" src="./images/workes/<?php echo $type1[$i]['icon']?>" />
@@ -369,7 +369,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
           >
           <?php for ($i=0; $i < count($type2); $i++) { ?>
             <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
-              <a href="work-desc.html" class="work">
+              <a href="work-desc.php" class="work">
                 <div class="image center">
                   <div class="work-image">
                   <img class="work-image" style="height: 100%;width: 100%;" src="./images/workes/<?php echo $type2[$i]['icon']?>" />
@@ -402,7 +402,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
           >
           <?php for ($i=0; $i < count($type3); $i++) { ?>
             <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
-              <a href="work-desc.html" class="work">
+              <a href="work-desc.php" class="work">
                 <div class="image center">
                   <div class="work-image">
                   <img class="work-image" style="height: 100%;width: 100%;" src="./images/workes/<?php echo $type3[$i]['icon']?>" />
@@ -434,7 +434,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
           <?php if($type == 4){ ?>class="row row-cols-1 row-cols-md-2 row-cols-lg-3 open"<?php }else{?>class="row row-cols-1 row-cols-md-2 row-cols-lg-3"<?php }?>>
           <?php for ($i=0; $i < count($type4); $i++) { ?>
             <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
-              <a href="work-desc.html" class="work">
+              <a href="work-desc.php" class="work">
                 <div class="image center">
                   <div class="work-image">
                   <img class="work-image" style="height: 100%;width: 100%;" src="./images/workes/<?php echo $type4[$i]['icon']?>" />
@@ -497,7 +497,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
             </div>
             <div class="services">
               <p>روابط</p>
-              <a href="contact-us.html">اتصل بنا</a>
+              <a href="contact-us.php">اتصل بنا</a>
               <a onclick="toggleRequestForm()"> انضم الينا</a>
               <a href="index.php#customers">عملائنا</a>
               <a href="work.php?type=1">معرض الاعمال</a>

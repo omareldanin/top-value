@@ -5,6 +5,9 @@ require "images/back/lib.php";
 $query = 'SELECT * FROM workes WHERE id = '.$workId.'';
 $result = mysqli_query($conn , $query);
 $selectedWorker = mysqli_fetch_all($result ,MYSQLI_ASSOC);
+$query1 = 'SELECT * FROM workphoto WHERE work_id = '.$workId.' ORDER BY sort';
+$result1 = mysqli_query($conn , $query1);
+$Workerphoto = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -45,7 +48,7 @@ $selectedWorker = mysqli_fetch_all($result ,MYSQLI_ASSOC);
               <a class="main-link" href="index.php">الرئيسيه</a>
             </li>
             <li>
-              <a class="main-link" href="our-services.html">الخدمات</a>
+              <a class="main-link" href="our-services.php">الخدمات</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -101,7 +104,7 @@ $selectedWorker = mysqli_fetch_all($result ,MYSQLI_ASSOC);
               </ul>
             </li>
             <li>
-              <a class="main-link" href="work.php">الاعمال</a>
+              <a class="main-link" href="work.php?type=1">الاعمال</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -337,11 +340,14 @@ $selectedWorker = mysqli_fetch_all($result ,MYSQLI_ASSOC);
             </a>
           </div>
         </div>
-        <img
-                class="work-pages"
-                style="height: 100%;width: 100%;"
-                src="./images/workes/<?php echo $selectedWorker[0]['sup_icon']?>"
-              />
+        <div class="work-pages">
+          <?php foreach ($Workerphoto as $photo) {?>
+            <div class="page3">
+              <img style="height: 100%;width: 100%;" src="./images/workes/<?php echo $photo['name']?>"/>
+            </div>
+            <?php }?>
+        </div>
+        
           
         <div class="bottom">
           <button>اطلب الخدمة الان</button>
@@ -380,7 +386,7 @@ $selectedWorker = mysqli_fetch_all($result ,MYSQLI_ASSOC);
             </div>
             <div class="services">
               <p>روابط</p>
-              <a href="contact-us.html">اتصل بنا</a>
+              <a href="contact-us.php">اتصل بنا</a>
               <a onclick="toggleRequestForm()"> انضم الينا</a>
               <a href="index.php#customers">عملائنا</a>
               <a href="work.php?type=1">معرض الاعمال</a>

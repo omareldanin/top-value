@@ -1,13 +1,18 @@
 <?php 
 require "images/back/lib.php";
 
-$query = 'SELECT * FROM workes';
+$query = 'SELECT * FROM workes where not type = "voice"';
 $result = mysqli_query($conn , $query);
 $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
+
+$query1 = 'SELECT * FROM clints';
+$result1 = mysqli_query($conn , $query1);
+$clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
 <html lang="ar">
+  
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -146,7 +151,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
               <a class="main-link" href="index.php">الرئيسيه</a>
             </li>
             <li>
-              <a class="main-link" href="our-services.html">الخدمات</a>
+              <a class="main-link" href="our-services.php">الخدمات</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -202,7 +207,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
               </ul>
             </li>
             <li>
-              <a class="main-link" href="work.php">الاعمال</a>
+              <a class="main-link" href="work.php?type=1">الاعمال</a>
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
@@ -368,7 +373,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
           <div class="contact-us">
             <i>i</i>
             <span>لديك استفسار ؟</span>
-            <a href="contact-us.html">تواصل معنا</a>
+            <a href="contact-us.php">تواصل معنا</a>
           </div>
         </div>
       </div>
@@ -455,7 +460,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
                 </a>
               </div>
               <div class="col wow fadeInRight" data-wow-delay=".3s">
-                <a href="work.html">
+                <a href="work.php?type=1">
                   <span class="center">
                     <img src="./images/Artboard–1/logo3.png" />
                   </span>
@@ -580,7 +585,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
           <div class="swiper-wrapper">
             <?php foreach($selectedworkes as $worke) { ?>
             <div class="swiper-slide wow ">
-              <a href="work-desc.php?workId=<?php echo $worke['id']?>" class="work">
+              <a  <?php if($worke['advantage'] =="تطبيقات الويب") { ?> href="work3.php?workId=<?php echo $worke['id']?>" <?php }else if($worke['advantage'] =="تطبيقات الجوال"){ ?>href="work-desc.php?workId=<?php echo $worke['id']?>"<?php }else{?>href="work2.php?workId=<?php echo $worke['id']?>"<?php }?> class="work">
                 <div class="image center">
                   <div class="work-image">
                     <img class="work-image" style="height: 100%;width: 100%;" src="./images/workes/<?php echo $worke['icon']?>" />
@@ -588,9 +593,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
                   <?php if($worke['advantage'] =="تطبيقات الجوال") { ?>
                   
                     <div class="icons">
-                    <div class="icon center">
-                      <img src="./images/3/laptop.svg" />
-                    </div>
+                    
                     <div class="icon center">
                       <img src="./images/3/Group 58160.svg" />
                     </div>
@@ -598,7 +601,11 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
                       <img src="./images/3/Group 72042.svg" />
                     </div>
                   </div>
-                  <?php }?>
+                  <?php }else{?>
+                    <div class="icons">
+                    
+                  </div>
+                    <?php }?>
                 </div>
                 <div class="desc">
                   <h3><?php echo $worke['titel']?></h3>
@@ -620,7 +627,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
           </div>
         </div>
         <div class="show-more">
-          <a href="work.html">مشاهده المزيد</a>
+          <a href="work.php?type=1">مشاهده المزيد</a>
         </div>
       </div>
     </section>
@@ -688,180 +695,44 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
               <div class="col-lg-6 wow fadeInRight" data-wow-delay=".8s">
                 <div class="swiper mySwiper2">
                   <div class="swiper-wrapper">
+                    <?php foreach($clints as $clint) { ?>
+                      
                     <div class="swiper-slide">
                       <div class="review">
                         <p>
-                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
-                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
-                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
-                          نماذج مواقع انترنت …
+                          <?php echo $clint['text']?>
                         </p>
                         <div class="info">
-                          <div class="profile">
+                          <div class="profile" style="height: 100%;width: 100%;">
                             <img
-                              src="./images/Artboard-2/Group 480.png"
+                            style="height: 100px;width: 100px;border-radius: 500px;"
+                            src="./images/clint/<?php echo $clint['image']?>"
                               alt=""
                             />
                             <div class="name">
-                              <h4>محمد حسام</h4>
-                              <p>مصمم مواقع</p>
+                              <h4><?php echo $clint['name']?></h4>
+                              <p><?php echo $clint['postion']?></p>
                             </div>
                           </div>
                           <div class="icon">
                             <i class="fa-solid fa-quote-right"></i>
                           </div>
                         </div>
-                      </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="review">
-                        <p>
-                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
-                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
-                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
-                          نماذج مواقع انترنت …
-                        </p>
-                        <div class="info">
-                          <div class="profile">
-                            <img
-                              src="./images/Artboard-2/Group 480.png"
-                              alt=""
-                            />
-                            <div class="name">
-                              <h4>محمد حسام</h4>
-                              <p>مصمم مواقع</p>
-                            </div>
-                          </div>
-                          <div class="icon">
-                            <i class="fa-solid fa-quote-right"></i>
-                          </div>
-                        </div>
                       </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review">
-                        <p>
-                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
-                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
-                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
-                          نماذج مواقع انترنت …
-                        </p>
-                        <div class="info">
-                          <div class="profile">
-                            <img
-                              src="./images/Artboard-2/Group 480.png"
-                              alt=""
-                            />
-                            <div class="name">
-                              <h4>محمد حسام</h4>
-                              <p>مصمم مواقع</p>
-                            </div>
-                          </div>
-                          <div class="icon">
-                            <i class="fa-solid fa-quote-right"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review">
-                        <p>
-                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
-                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
-                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
-                          نماذج مواقع انترنت …
-                        </p>
-                        <div class="info">
-                          <div class="profile">
-                            <img
-                              src="./images/Artboard-2/Group 480.png"
-                              alt=""
-                            />
-                            <div class="name">
-                              <h4>محمد حسام</h4>
-                              <p>مصمم مواقع</p>
-                            </div>
-                          </div>
-                          <div class="icon">
-                            <i class="fa-solid fa-quote-right"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review">
-                        <p>
-                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
-                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
-                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
-                          نماذج مواقع انترنت …
-                        </p>
-                        <div class="info">
-                          <div class="profile">
-                            <img
-                              src="./images/Artboard-2/Group 480.png"
-                              alt=""
-                            />
-                            <div class="name">
-                              <h4>محمد حسام</h4>
-                              <p>مصمم مواقع</p>
-                            </div>
-                          </div>
-                          <div class="icon">
-                            <i class="fa-solid fa-quote-right"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="review">
-                        <p>
-                          لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
-                          على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت
-                          تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او
-                          نماذج مواقع انترنت …
-                        </p>
-                        <div class="info">
-                          <div class="profile">
-                            <img
-                              src="./images/Artboard-2/Group 480.png"
-                              alt=""
-                            />
-                            <div class="name">
-                              <h4>محمد حسام</h4>
-                              <p>مصمم مواقع</p>
-                            </div>
-                          </div>
-                          <div class="icon">
-                            <i class="fa-solid fa-quote-right"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      <?php }?>
                   </div>
                   <div class="swiper-pagination"></div>
                 </div>
               </div>
               <div class="col-lg-6 center wow fadeInLeft" data-wow-delay=".8s">
                 <div class="users">
-                  <div class="user1">
-                    <img src="./images/Artboard-2/Group 348.png" alt="" />
+                <?php for ($i=0; $i < count($clints); $i++) { ?>
+                  <div class="user<?php echo $i+1?>">
+                    <img style="height: 100px;width: 100px;border-radius: 500px;"
+                              src="./images/clint/<?php echo $clints[$i]['image']?>"  alt=""/>
                   </div>
-                  <div class="user2">
-                    <img src="./images/Artboard-2/Group 480.png" alt="" />
-                  </div>
-                  <div class="user3">
-                    <img src="./images/Artboard-2/Group 348.png" alt="" />
-                  </div>
-                  <div class="user4">
-                    <img src="./images/Artboard-2/Group 480.png" alt="" />
-                  </div>
-                  <div class="user5">
-                    <img src="./images/Artboard-2/Group 348.png" alt="" />
-                  </div>
-                  <div class="user6">
-                    <img src="./images/Artboard-2/Group 348.png" alt="" />
-                  </div>
+                <?php }?>
                 </div>
                 <div class="active-user center"></div>
               </div>
@@ -911,7 +782,7 @@ $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
             </div>
             <div class="services">
               <p>روابط</p>
-              <a href="contact-us.html">اتصل بنا</a>
+              <a href="contact-us.php">اتصل بنا</a>
               <a onclick="toggleRequestForm()"> انضم الينا</a>
               <a href="index.php#customers">عملائنا</a>
               <a href="work.php?type=1">معرض الاعمال</a>
