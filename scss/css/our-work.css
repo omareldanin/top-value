@@ -76,11 +76,9 @@ body section.our-works .row .work {
 body section.our-works .row .work .image {
   position: relative;
   width: 100%;
-  height: 280px;
-  background: linear-gradient(180deg, rgba(19, 9, 74, 0.17), rgba(10, 136, 132, 0.17));
 }
 body section.our-works .row .work .image .work-image img {
-  width: 300px;
+  width: 100%;
 }
 body section.our-works .row .work .image .icons {
   position: absolute;
