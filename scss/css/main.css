@@ -1166,6 +1166,12 @@ body section.customers .over .container .testmencial .review .info .profile {
   display: flex;
   align-items: center;
 }
+body section.customers .over .container .testmencial .review .info .profile img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
 body section.customers .over .container .testmencial .review .info .profile h4 {
   font-size: 14px;
   font-weight: bold;
@@ -1207,27 +1213,29 @@ body section.customers .over .container .col-lg-6:last-child .users div {
 }
 body section.customers .over .container .col-lg-6:last-child .users div img {
   transition: 200ms;
+  border-radius: 50%;
+  border: 4px solid #fff;
 }
 body section.customers .over .container .col-lg-6:last-child .users div:hover img {
   transform: scale(1.2);
 }
 body section.customers .over .container .col-lg-6:last-child .users .user1 {
-  right: 20px;
-  top: 60px;
+  right: 50px;
+  top: 50px;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user1 img {
   max-width: 56px;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user2 {
   top: 50px;
-  left: 0;
+  left: 30px;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user2 img {
   max-width: 83px;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user3 {
   right: 40%;
-  top: 0px;
+  bottom: 20px;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user3 img {
   max-width: 72px;
@@ -1237,21 +1245,21 @@ body section.customers .over .container .col-lg-6:last-child .users .user4 {
   top: 50%;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user4 img {
-  max-width: 90px;
+  max-width: 56px;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user5 {
-  right: 40%;
-  bottom: 0;
+  left: 0;
+  top: 50%;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user5 img {
   max-width: 72px;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user6 {
-  left: 0;
-  top: 50%;
+  right: 40%;
+  top: 0px;
 }
 body section.customers .over .container .col-lg-6:last-child .users .user6 img {
-  max-width: 56px;
+  max-width: 83px;
 }
 @keyframes rotating {
   0% {

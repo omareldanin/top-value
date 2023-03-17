@@ -705,7 +705,6 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                         <div class="info">
                           <div class="profile" style="height: 100%;width: 100%; ">
                             <img
-                            style="height: 60px;width: 60px;border-radius: 500px;margin-left:10px"
                             src="./images/clint/<?php echo $clint['image']?>"
                               alt=""
                             />
@@ -729,7 +728,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                 <div class="users">
                 <?php for ($i=0; $i < count($clints); $i++) { ?>
                   <div class="user<?php echo $i+1?>">
-                    <img style="height: 100px;width: 100px;border-radius: 500px;"
+                    <img
                               src="./images/clint/<?php echo $clints[$i]['image']?>"  alt=""/>
                   </div>
                 <?php }?>
