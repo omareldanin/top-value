@@ -1,7 +1,7 @@
 <?php 
 require "images/back/lib.php";
 
-$query = 'SELECT * FROM workes where not type = "voice"';
+$query = 'SELECT * FROM workes where not type = "voice" ORDER BY `sort`';
 $result = mysqli_query($conn , $query);
 $selectedworkes = mysqli_fetch_all($result ,MYSQLI_ASSOC);
 
@@ -614,7 +614,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                   <?php if(strlen($worke['sup_titel']) < 130){
                     echo $worke['sup_titel'];
                     }else{
-                      for ($i=0; $i < 120; $i++) { 
+                      for ($i=0; $i < 130; $i++) { 
                         echo $worke['sup_titel'][$i];
                       }
                       echo "...";
