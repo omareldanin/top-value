@@ -382,26 +382,26 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
           <div class="row row-cols-2 row-cols-md-4">
             <div class="col">
               <div>
-                <span class="number" data-number="80">+0</span>
-                <span>موقع وتطبيق</span>
+                <span class="number" data-number="25">+0</span>
+                <span>تطبيق وموقع</span>
               </div>
             </div>
             <div class="col">
               <div>
-                <span class="number" data-number="80">+0</span>
-                <span>موقع وتطبيق</span>
+                <span class="number" data-number="15">+0</span>
+                <span>هوية بصرية</span>
               </div>
             </div>
             <div class="col">
               <div>
-                <span class="number" data-number="80">+0</span>
-                <span>موقع وتطبيق</span>
+                <span class="number" data-number="10">+0</span>
+                <span>اعلانات موشن غرافيك</span>
               </div>
             </div>
             <div class="col">
               <div>
-                <span class="number" data-number="80">+0</span>
-                <span>موقع وتطبيق</span>
+                <span class="number" data-number="300">+0</span>
+                <span>دقيقة تعليق صوتي</span>
               </div>
             </div>
           </div>
@@ -740,11 +740,10 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
         </div>
         <div class="companies">
           <div class="container">
-            <img src="./images/Artboard-2/Rectangle 73.png" />
-            <img src="./images/Artboard-2/Rectangle 74.png" />
-            <img src="./images/Artboard-2/Rectangle 75.png" />
-            <img src="./images/Artboard-2/Rectangle 76.png" />
-            <img src="./images/Artboard-2/Rectangle 77.png" />
+            <img style="height: 75px;width: 75px; " src="./images/companies/IMG_7880.PNG" />
+            <img style="height: 75px;width: 75px; " src="./images/companies/logo.png" />
+            <img style="height: 75px;width: 75px; " src="./images/companies/لوجو-مفرغ (1).png" />
+            <img style="height: 75px;width: 75px; " src="./images/companies/لوجو-مفرغ.png" />
           </div>
         </div>
       </div>
@@ -760,9 +759,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
               <img src="./images/Image 5/Image 5.png" />
             </a>
             <div>
-              <p>
-                نضيف قيمة جيدة لعملك <br />
-                التقني
+              <p>القيمة الافضل لنشاطك التجاري
               </p>
             </div>
             <div class="social">

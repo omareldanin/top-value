@@ -445,9 +445,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               <img src="./images/Image 5/Image 5.png" />
             </div>
             <div>
-              <p>
-                نضيف قيمة جيدة لعملك <br />
-                التقني
+              <p>القيمة الافضل لنشاطك التجاري
               </p>
             </div>
             <div class="social">
