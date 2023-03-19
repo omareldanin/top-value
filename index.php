@@ -144,7 +144,6 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
           <img src="./images/Artboard–1/Image1.png" />
           <img src="./images/Artboard–1/logo.png" />
         </a>
-        
         <div class="links">
           <ul>
             <li>
@@ -211,7 +210,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
-                  <a>
+                  <a href="work.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#display-code" />
@@ -228,7 +227,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work5.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#voice-recorder" />
@@ -245,7 +244,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work1.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#fill" />
@@ -262,7 +261,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work4.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#video" />

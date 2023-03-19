@@ -1126,8 +1126,6 @@ body section.customers .over {
 body section.customers .over .container {
   height: 100%;
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 body section.customers .over .container .row {
   justify-content: space-between;

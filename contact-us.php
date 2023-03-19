@@ -97,7 +97,7 @@
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
-                  <a>
+                  <a href="work.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#display-code" />
@@ -114,7 +114,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work5.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#voice-recorder" />
@@ -131,7 +131,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work1.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#fill" />
@@ -148,7 +148,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work4.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#video" />

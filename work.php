@@ -115,7 +115,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
-                  <a>
+                  <a href="work.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#display-code" />
@@ -132,7 +132,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work5.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#voice-recorder" />
@@ -149,7 +149,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work1.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#fill" />
@@ -166,7 +166,7 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work4.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#video" />

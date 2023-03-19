@@ -2,9 +2,18 @@
 $type  = $_GET['type'];
 require "images/back/lib.php";
 
-/* $query = 'SELECT * FROM advantages WHERE id = '.$Services.'';
-$result = mysqli_query($conn , $query);
-$selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC); */
+$query1 = 'SELECT * FROM workes WHERE advantage = "مونتاج فيديو"';
+$result1 = mysqli_query($conn , $query1);
+$type1 = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
+$query2 = 'SELECT * FROM workes WHERE advantage = "وايت بورد"';
+$result2 = mysqli_query($conn , $query2);
+$type2 = mysqli_fetch_all($result2 ,MYSQLI_ASSOC);
+$query3 = 'SELECT * FROM workes WHERE advantage = "موشن غرافيك"';
+$result3 = mysqli_query($conn , $query3);
+$type3 = mysqli_fetch_all($result3 ,MYSQLI_ASSOC);
+$query4 = 'SELECT * FROM workes WHERE advantage = "أنترو"';
+$result4 = mysqli_query($conn , $query4);
+$type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -105,7 +114,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC); */
               <i class="fa-solid fa-angle-down"></i>
               <ul class="menu-1">
                 <li>
-                  <a>
+                  <a href="work.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#display-code" />
@@ -122,7 +131,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC); */
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work5.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#voice-recorder" />
@@ -139,7 +148,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC); */
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work1.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#fill" />
@@ -156,7 +165,7 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC); */
                   </ul>
                 </li>
                 <li>
-                  <a>
+                  <a href="work4.php?type=1">
                     <span>
                       <svg>
                         <use xlink:href="#video" />
@@ -322,151 +331,98 @@ $selectedServices = mysqli_fetch_all($result ,MYSQLI_ASSOC); */
           <div id="montage"
           <?php if($type == 1){ ?>class="row row-cols-1 row-cols-lg-2 open"<?php }else{?>class="row row-cols-1 row-cols-lg-2"<?php }?>
           >
-            <div class="col wow fadeInRight" data-wow-delay="0.1s">
+          <?php for ($i=0; $i < count($type1); $i++) { ?>
+            <a href="work-video.php?workId=<?php echo $type1[$i]['id']?>" class="work">
+            <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="work">
-                <div class="video">
-                  <img src="./images/Group 72692.svg" />
+                <div class="video"> 
+                  <img src="./images/<?php echo $type1[$i]['icon']?>" />
                   <video>
-                    <source src="./images/Palm_Trees.mp4" type="video/mp4" />
+                    <source src="./images/<?php echo $type1[$i]['sup_icon']?>" type="video/mp4" />
                   </video>
                 </div>
                 <div class="desc">
-                  <h3>اسم العمل هنا</h3>
+                  <h3><?php echo $type1[$i]['titel']?></h3>
                   <p>
-                    لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                    العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                    مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                    انترنت …
+                  <?php echo $type1[$i]['sup_titel']?>
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col wow fadeInRight" data-wow-delay="0.2s">
-              <div class="work">
-                <div class="video">
-                  <img src="./images/Group 72692.svg" />
-                  <video>
-                    <source src="./images/Palm_Trees.mp4" type="video/mp4" />
-                  </video>
-                </div>
-                <div class="desc">
-                  <h3>اسم العمل هنا</h3>
-                  <p>
-                    لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                    العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                    مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                    انترنت …
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col wow fadeInRight" data-wow-delay="0.3s">
-              <div class="work">
-                <div class="video">
-                  <img src="./images/Group 72692.svg" />
-                  <video>
-                    <source src="./images/Palm_Trees.mp4" type="video/mp4" />
-                  </video>
-                </div>
-                <div class="desc">
-                  <h3>اسم العمل هنا</h3>
-                  <p>
-                    لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                    العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                    مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                    انترنت …
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col wow fadeInRight" data-wow-delay="0.4s">
-              <div class="work">
-                <div class="video">
-                  <img src="./images/Group 72692.svg" />
-                  <video>
-                    <source src="./images/Palm_Trees.mp4" type="video/mp4" />
-                  </video>
-                </div>
-                <div class="desc">
-                  <h3>اسم العمل هنا</h3>
-                  <p>
-                    لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                    العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                    مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                    انترنت …
-                  </p>
-                </div>
-              </div>
-            </div>
+          </a>
+            <?php }?>
           </div>
           <div id="Whiteboard" 
           <?php if($type == 2){ ?>class="row row-cols-1 row-cols-lg-2 open"<?php }else{?>class="row row-cols-1 row-cols-lg-2"<?php }?>>
-            <div class="col wow fadeInRight" data-wow-delay="0.1s">
+          <?php for ($i=0; $i < count($type2); $i++) { ?>
+            <a href="work-video.php?workId=<?php echo $type2[$i]['id']?>" class="work">
+            <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="work">
-                <div class="video">
-                  <img src="./images/Group 72692.svg" />
+                <div class="video"> 
+                  <img src="./images/<?php echo $type2[$i]['icon']?>" />
                   <video>
-                    <source src="./images/Palm_Trees.mp4" type="video/mp4" />
+                    <source src="./images/<?php echo $type2[$i]['sup_icon']?>" type="video/mp4" />
                   </video>
                 </div>
                 <div class="desc">
-                  <h3>اسم العمل هنا</h3>
+                  <h3><?php echo $type2[$i]['titel']?></h3>
                   <p>
-                    لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                    العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                    مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                    انترنت …
+                  <?php echo $type2[$i]['sup_titel']?>
                   </p>
                 </div>
               </div>
             </div>
+          </a>
+            <?php }?>
           </div>
           <div id="Graphic" 
           <?php if($type == 3){ ?>class="row row-cols-1 row-cols-lg-2 open"<?php }else{?>class="row row-cols-1 row-cols-lg-2"<?php }?>>
-            <div class="col wow fadeInRight" data-wow-delay="0.1s">
+          <?php for ($i=0; $i < count($type3); $i++) { ?>
+            <a href="work-video.php?workId=<?php echo $type3[$i]['id']?>" class="work">
+            <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="work">
-                <div class="video">
-                  <img src="./images/Group 72692.svg" />
+                <div class="video"> 
+                  <img src="./images/<?php echo $type3[$i]['icon']?>" />
                   <video>
-                    <source src="./images/Palm_Trees.mp4" type="video/mp4" />
+                    <source src="./images/<?php echo $type3[$i]['sup_icon']?>" type="video/mp4" />
                   </video>
                 </div>
                 <div class="desc">
-                  <h3>اسم العمل هنا</h3>
+                  <h3><?php echo $type3[$i]['titel']?></h3>
                   <p>
-                    لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                    العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                    مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                    انترنت …
+                  <?php echo $type3[$i]['sup_titel']?>
                   </p>
                 </div>
               </div>
             </div>
+          </a>
+            <?php }?>
           </div>
           <div id="Antro" 
           <?php if($type == 4){ ?>class="row row-cols-1 row-cols-lg-2 open"<?php }else{?>class="row row-cols-1 row-cols-lg-2"<?php }?>>
-            <div class="col wow fadeInRight" data-wow-delay="0.1s">
+          <?php for ($i=0; $i < count($type4); $i++) { ?>
+            <a href="work-video.php?workId=<?php echo $type4[$i]['id']?>" class="work">
+            <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="work">
-                <div class="video">
-                  <img src="./images/Group 72692.svg" />
+                <div class="video"> 
+                  <img src="./images/<?php echo $type4[$i]['icon']?>" />
                   <video>
-                    <source src="./images/Palm_Trees.mp4" type="video/mp4" />
+                    <source src="./images/<?php echo $type4[$i]['sup_icon']?>" type="video/mp4" />
                   </video>
                 </div>
                 <div class="desc">
-                  <h3>اسم العمل هنا</h3>
+                  <h3><?php echo $type4[$i]['titel']?></h3>
                   <p>
-                    لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
-                    العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم
-                    مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع
-                    انترنت …
+                  <?php echo $type4[$i]['sup_titel']?>
                   </p>
                 </div>
               </div>
             </div>
+          </a>
+            <?php }?>
           </div>
         </div>
-        <div class="bottom">
+        <div class="bottom" onclick="toggleRequestForm()">
           <button>اطلب الخدمة الان</button>
         </div>
       </div>
