@@ -810,7 +810,7 @@ body .header .our-number {
   background-color: rgba(0, 0, 0, 0.1647058824);
 }
 body .header .our-number .row .col {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
 }
 body .header .our-number .row .col div {

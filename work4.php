@@ -219,101 +219,88 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
       </div>
     </nav>
     <div class="request-form center" onclick="toggleRequestForm()">
-      <div class="form-container">
-        <div class="head">
-          <h3>طلب خدمة</h3>
-          <img
-            src="./images/3 – 4/Layer 22.svg"
-            onclick="toggleRequestForm()"
-          />
+        <div class="form-container">
+            <div class="head">
+                <h3>طلب خدمة</h3>
+                <img src="./images/3 – 4/Layer 22.svg" onclick="toggleRequestForm()" />
+            </div>
+            <form action="images/back/lib.php" method="post">
+                <div class="mb-3">
+                    <div>
+                        <div class="icon">
+                            <img src="./images/3 – 3/User-Icon.svg" />
+                            <span>|</span>
+                        </div>
+                        <label class="" for="name">الاسم</label>
+                        <input class="form-control" type="text" name="name" id="name" />
+                    </div>
+                    <div>
+                        <div class="icon">
+                            <img src="./images/3 – 3/Email-Icon.svg" />
+                            <span>|</span>
+                        </div>
+                        <label for="email">البريد الالكتروني</label>
+                        <input class="form-control" type="email" name="email" id="email" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div>
+                        <div class="icon">
+                            <img src="./images/3 – 3/User-Icon-1.svg" />
+                            <span>|</span>
+                        </div>
+                        <label for="phone">رقم الجوال</label>
+                        <input class="form-control" type="text" name="phone" id="phone" />
+                    </div>
+                    <div>
+                        <div class="icon">
+                            <img src="./images/3 – 3/Email-Icon.svg" />
+                            <span>|</span>
+                        </div>
+                        <label for="company">إسم الشركه</label>
+                        <input class="form-control" type="text" name="company" id="company" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div>
+                        <div class="icon">
+                            <img src="./images/3 – 4/User-Icon.svg" />
+                            <span>|</span>
+                        </div>
+                        <div class="arrow-icon">
+                            <img src="./images/3 – 3/Polygon 7.svg" />
+                        </div>
+                        <label for="department">القسم</label>
+                        <select id="department" name="department" class="form-control">
+                            <option selected disabled></option>
+                            <option value="البرمجة">البرمجة</option>
+                            <option value="التعليق الصوتي">التعليق الصوتي</option>
+                            <option value="التصميم">التصميم</option>
+                            <option value="المونتاج">المونتاج</option>
+                            <!-- <option value="تقديم البرامج">تقديم البرامج</option> -->
+                        </select>
+                    </div>
+
+                    <div>
+                        <div class="icon">
+                            <img src="./images/3 – 3/Email-Icon-1.svg" />
+                            <span>|</span>
+                        </div>
+                        <label for="city">المدينه</label>
+                        <input class="form-control" type="text" name="city" id="city" />
+                    </div>
+                </div>
+                <div class="mb-4 details">
+                    <div>
+                        <label for="details">التفاصيل</label>
+                        <textarea id="details" name="details" class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button name="Add_request" type="submit">ارسال</button>
+                </div>
+            </form>
         </div>
-        <form action="images/back/lib.php" method="post">
-          <div class="mb-3">
-            <div>
-              <div class="icon">
-                <img src="./images/3 – 3/User-Icon.svg" />
-                <span>|</span>
-              </div>
-              <label class="" for="name">الاسم</label>
-              <input class="form-control" type="text" name="name" id="name" />
-            </div>
-            <div>
-              <div class="icon">
-                <img src="./images/3 – 3/Email-Icon.svg" />
-                <span>|</span>
-              </div>
-              <label for="email">البريد الالكتروني</label>
-              <input class="form-control" type="email" name="email" id="email" />
-            </div>
-          </div>
-          <div class="mb-3">
-            <div>
-              <div class="icon">
-                <img src="./images/3 – 3/User-Icon-1.svg" />
-                <span>|</span>
-              </div>
-              <label for="phone">رقم الجوال</label>
-              <input class="form-control" type="text" name="phone" id="phone" />
-            </div>
-            <div>
-              <div class="icon">
-                <img src="./images/3 – 3/Email-Icon.svg" />
-                <span>|</span>
-              </div>
-              <label for="company">إسم الشركه</label>
-              <input
-                class="form-control"
-                type="text"
-                name="company"
-                id="company"
-              />
-            </div>
-          </div>
-          <div class="mb-3">
-            <div>
-              <div class="icon">
-                <img src="./images/3 – 4/User-Icon.svg" />
-                <span>|</span>
-              </div>
-              <div class="arrow-icon">
-                <img src="./images/3 – 3/Polygon 7.svg" />
-              </div>
-              <label for="department">القسم</label>
-              <select id="department" name="department" class="form-control">
-                <option selected disabled></option>
-                <option value="البرمجة">البرمجة</option>
-                <option value="التعليق الصوتي">التعليق الصوتي</option>
-                <option value="التصميم">التصميم</option>
-                <option value="المونتاج">المونتاج</option>
-                <option value="تقديم البرامج">تقديم البرامج</option>
-              </select>
-            </div>
-            
-            <div>
-              <div class="icon">
-                <img src="./images/3 – 3/Email-Icon-1.svg" />
-                <span>|</span>
-              </div>
-              <label for="city">المدينه</label>
-              <input
-                class="form-control"
-                type="text"
-                name="city"
-                id="city"
-              />
-            </div>
-          </div>
-          <div class="mb-4 details">
-            <div>
-              <label for="details">التفاصيل</label>
-              <textarea id="details" name="details" class="form-control" rows="5"></textarea>
-            </div>
-          </div>
-          <div class="mb-3">
-            <button name="Add_request" type="submit">ارسال</button>
-          </div>
-        </form>
-      </div>
     </div>
     <section class="our-works1">
       <div class="container">
@@ -332,13 +319,12 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
           <?php if($type == 1){ ?>class="row row-cols-1 row-cols-lg-2 open"<?php }else{?>class="row row-cols-1 row-cols-lg-2"<?php }?>
           >
           <?php for ($i=0; $i < count($type1); $i++) { ?>
-            <a href="work-video.php?workId=<?php echo $type1[$i]['id']?>" class="work">
             <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="work">
                 <div class="video"> 
-                  <img src="./images/<?php echo $type1[$i]['icon']?>" />
+                  <img src="./images/workes/<?php echo $type1[$i]['icon']?>"style="height: 100%;width: 100%; border-radius : 40px ;padding :22px" />
                   <video>
-                    <source src="./images/<?php echo $type1[$i]['sup_icon']?>" type="video/mp4" />
+                    <source src="./images/workes/<?php echo $type1[$i]['sup_icon']?>" type="video/mp4" />
                   </video>
                 </div>
                 <div class="desc">
@@ -349,7 +335,6 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
                 </div>
               </div>
             </div>
-          </a>
             <?php }?>
           </div>
           <div id="Whiteboard" 
@@ -359,9 +344,9 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
             <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="work">
                 <div class="video"> 
-                  <img src="./images/<?php echo $type2[$i]['icon']?>" />
+                  <img src="./images/workes/<?php echo $type2[$i]['icon']?>" style="height: 100%;width: 100%; border-radius : 40px ;padding :22px" />
                   <video>
-                    <source src="./images/<?php echo $type2[$i]['sup_icon']?>" type="video/mp4" />
+                    <source src="./images/workes/<?php echo $type2[$i]['sup_icon']?>" type="video/mp4" />
                   </video>
                 </div>
                 <div class="desc">
@@ -382,9 +367,9 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
             <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="work">
                 <div class="video"> 
-                  <img src="./images/<?php echo $type3[$i]['icon']?>" />
+                  <img src="./images/workes/<?php echo $type3[$i]['icon']?>" style="height: 100%;width: 100%; border-radius : 40px ;padding :22px" />
                   <video>
-                    <source src="./images/<?php echo $type3[$i]['sup_icon']?>" type="video/mp4" />
+                    <source src="./images/workes/<?php echo $type3[$i]['sup_icon']?>" type="video/mp4" />
                   </video>
                 </div>
                 <div class="desc">
@@ -405,9 +390,9 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
             <div class="col wow fadeInRight" data-wow-delay="0.<?php echo $i?>s">
               <div class="work">
                 <div class="video"> 
-                  <img src="./images/<?php echo $type4[$i]['icon']?>" />
+                  <img src="./images/workes/<?php echo $type4[$i]['icon']?>" style="height: 100%;width: 100%; border-radius : 40px ;padding :22px" />
                   <video>
-                    <source src="./images/<?php echo $type4[$i]['sup_icon']?>" type="video/mp4" />
+                    <source src="./images/workes/<?php echo $type4[$i]['sup_icon']?>" type="video/mp4" />
                   </video>
                 </div>
                 <div class="desc">
@@ -476,8 +461,8 @@ $type4 = mysqli_fetch_all($result4 ,MYSQLI_ASSOC);
           </div>
         </div>
         <div class="copy-right">
-          <p>جميع الحقوق محفوظة 2022 توب فاليو</p>
-        </div>
+                <p>جميع الحقوق محفوظة <?php echo date("Y");?> توب فاليو &copy;</p>
+            </div>
       </div>
     </footer>
     <!-- svg photos for sub menu in navbar -->
