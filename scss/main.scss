@@ -1142,6 +1142,7 @@ body {
   section.customers {
     background-color: #f7f8fb;
     position: relative;
+    padding: 40px 0;
     .over {
       overflow: hidden;
       .container {
@@ -1307,16 +1308,21 @@ body {
         width: 100%;
         z-index: 1;
         .container {
-          background-color: #fff;
-          min-height: 160px;
-          border-radius: 25px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-items: center;
-          img {
-            max-width: 100%;
-            margin: 10px;
+          .swiper {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            min-height: 160px;
+            border-radius: 25px;
+            .swiper-slide {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            img {
+              max-width: 100%;
+              margin: 10px;
+            }
           }
         }
       }

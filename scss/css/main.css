@@ -1119,6 +1119,7 @@ body section.features .col-md-7 .feature:hover {
 body section.customers {
   background-color: #f7f8fb;
   position: relative;
+  padding: 40px 0;
 }
 body section.customers .over {
   overflow: hidden;
@@ -1282,16 +1283,19 @@ body section.customers .over .companies {
   width: 100%;
   z-index: 1;
 }
-body section.customers .over .companies .container {
+body section.customers .over .companies .container .swiper {
+  display: flex;
+  align-items: center;
   background-color: #fff;
   min-height: 160px;
   border-radius: 25px;
+}
+body section.customers .over .companies .container .swiper .swiper-slide {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
-body section.customers .over .companies .container img {
+body section.customers .over .companies .container .swiper img {
   max-width: 100%;
   margin: 10px;
 }

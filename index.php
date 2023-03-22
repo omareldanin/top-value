@@ -713,11 +713,28 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
             </div>
             <div class="companies">
                 <div class="container">
-                    <img style="height: 75px;width: 75px; " src="./images/companies/IMG_7880.PNG" />
-                    <img style="height: 75px;width: 75px; " src="./images/companies/logo.png" />
-                    <img style="height: 75px;width: 75px; " src="./images/companies/لوجو-مفرغ (1).png" />
-                    <img style="height: 75px;width: 75px; " src="./images/companies/لوجو-مفرغ.png" />
-                    <img style="height: 75px;width: 75px; " src="./images/companies/unique-touch.png" />
+                    <div class="swiper companies-mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img style="height: 75px;width: 75px; " src="./images/companies/IMG_7880.PNG" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="height: 75px;width: 75px; " src="./images/companies/logo.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="height: 75px;width: 75px; " src="./images/companies/logo.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="height: 75px;width: 75px; " src="./images/companies/لوجو-مفرغ (1).png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="height: 75px;width: 75px; " src="./images/companies/لوجو-مفرغ.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img style="height: 75px;width: 75px; " src="./images/companies/unique-touch.png" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -864,6 +881,8 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
     new WOW().init();
     var swiper = new Swiper(".mySwiper", {
         freeMode: true,
+        allowSlideNext:false,
+        allowSlidePrev:false,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -887,7 +906,31 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
             },
         },
     });
-
+    var swiper = new Swiper(".companies-mySwiper", {
+        freeMode: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
+        },
+    });
     var swiper2 = new Swiper(".mySwiper2", {
         spaceBetween: 50,
         allowTouchMove: false,
