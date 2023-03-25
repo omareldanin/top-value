@@ -549,7 +549,8 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                     <?php foreach($selectedworkes as $worke) { ?>
                     <div class="swiper-slide wow ">
                         <a <?php if($worke['advantage'] =="تطبيقات الويب") { ?>
-                            href="work3.php?workId=<?php echo $worke['id']?>"<?php }else if($worke['advantage'] =="تطبيقات الجوال"){ ?>href="work-desc.php?workId=<?php echo $worke['id']?>"
+                            href="work3.php?workId=<?php echo $worke['id']?>"
+                            <?php }else if($worke['advantage'] =="تطبيقات الجوال"){ ?>href="work-desc.php?workId=<?php echo $worke['id']?>"
                             <?php }else{?>href="work2.php?workId=<?php echo $worke['id']?>" <?php }?> class="work">
                             <div class="image center">
                                 <div class="work-image">
@@ -717,9 +718,6 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img style="height: 75px;width: 75px; " src="./images/companies/IMG_7880.PNG" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img style="height: 75px;width: 75px; " src="./images/companies/logo.png" />
                             </div>
                             <div class="swiper-slide">
                                 <img style="height: 75px;width: 75px; " src="./images/companies/logo.png" />
@@ -904,7 +902,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
             },
         },
     });
-   
+
     var swiper2 = new Swiper(".companies-mySwiper", {
         freeMode: true,
         pagination: {
@@ -930,7 +928,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
             },
         },
     });
-  
+
     var swiper3 = new Swiper(".mySwiper2", {
         spaceBetween: 50,
         allowTouchMove: false,
