@@ -17,7 +17,7 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./scss/css/main.css" />
     <link rel="stylesheet" href="./scss/css/all.min.css" />
     <link rel="stylesheet" href="./scss/css/animate.css" />
@@ -875,17 +875,15 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
         </symbol>
     </svg>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
     new WOW().init();
-    var swiper = new Swiper(".mySwiper", {
+    var swiper1 = new Swiper(".mySwiper", {
         freeMode: true,
-        allowSlideNext:false,
-        allowSlidePrev:false,
         pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+            el: ".swiper-pagination2",
+            clickable: false,
         },
         breakpoints: {
             300: {
@@ -906,11 +904,12 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
             },
         },
     });
-    var swiper = new Swiper(".companies-mySwiper", {
+   
+    var swiper2 = new Swiper(".companies-mySwiper", {
         freeMode: true,
         pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+            el: ".swiper-pagination2",
+            clickable: false,
         },
         breakpoints: {
             300: {
@@ -931,7 +930,8 @@ $clints = mysqli_fetch_all($result1 ,MYSQLI_ASSOC);
             },
         },
     });
-    var swiper2 = new Swiper(".mySwiper2", {
+  
+    var swiper3 = new Swiper(".mySwiper2", {
         spaceBetween: 50,
         allowTouchMove: false,
         pagination: {
